@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Jost&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    scroll-behavior: smooth;
+}
+:root {
+    --primary-dark: #292F36;
+}
+.container {
+    width: min(100%, 1100px);
+    margin-inline: auto;
+}
+header {
+    width: 100%;
+    height: 80px;
+    padding-inline: calc(100% - 1100px) / 2;
+    position: fixed;
+    background-color: #fff;
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+    }
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 0 5px;
+        span {
+            color: var(--primary-dark);
+            font: 400 40px/125% "DM Serif Display";
+        }
+    }
+    .burger {
+        display: none;
+    }
+    nav {
+        ul {
+            display: flex;
+            gap: 35px;
+            align-items: center;
+            li a {
+                color: var(--primary-dark);
+                font: 400 18px/125% "Jost";
+                transition: color .5s;
+                position: relative;
+                &.active, &:hover { color: #CDA274; }
+                &:hover::after {
+                    transform-origin: left;
+                    transform: scaleX(1);
+                }
+                &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: -3px;
+                    left: 0;
+                    transform: scaleX(0);
+                    background-color: #CDA274;
+                    width: 100%;
+                    height: 2px;
+                    transition: transform .5s;
+                    transform-origin: right;
+                }
+            }
+        }
+    }
+}
+section {
+    margin-block-start: 128px;
+    &.hero {
+        margin-block-start: 0;
+        width: 100%;
+        height: 100vh;
+        background: fixed url("../img/hero.png") no-repeat center center / cover;
+        @media (min-width: 1440px) { height: 700px; }
+        @media (min-width: 1320px) { height: 630px; }
+        .text {
+            padding-top: 150px;
+            width: min(100%, 567px);
+            h1 {
+                color: #292F36;
+                font: 400 65px/125% "DM Serif Display";
+            }
+            p {
+                color: #4D5053;
+                font: 400 22px/150% "Jost";
+                letter-spacing: 0.22px;
+            }
+            a {
+                border-radius: 18px;
+                background: #292F36;
+                box-shadow: 0px 10px 20px 0px rgba(192, 192, 192, .35);
+                padding: 26px 48px;
+                display: inline-block;
+                margin-block-start: 21px;
+                color: #fff;
+                font: 600 18px/125% "Jost";
+                letter-spacing: 0.36px;
+                svg { margin-left: 10px; }
+                div { display: inline; }
+            }
+        }
+    }
+    &.info-cards {
+        .container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            .card {
+                width: min(100%, 338px);
+                text-align: center;
+                padding-inline: 10px;
+                h3 {
+                    color: var(--primary-dark);
+                    font: 400 25px/125% "DM Serif Display";
+                }
+                p {
+                    color: #4D5053;
+                    font: 400 22px/150% "Jost";
+                    letter-spacing: 0.22px;
+                    margin-top: 20px;
+                }
+                a {
+                    color: #4D5053;
+                    font: 600 18px/125% "Jost";
+                    letter-spacing: 0.36px;
+                    display: inline-block;
+                    margin-block-start: 30px;
+                    div { display: inline; }
+                    svg { margin-inline-start: 12px; }
+                }
+            }
+        }
+    }
+    &.about {
+        .container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            .text {
+                width: min(100%, 472px);
+                h1 {
+                    color: var(--primary-dark);
+                    font: 400 50px/125% "DM Serif Display";
+                    letter-spacing: 1px;
+                }
+                p {
+                    color: #4D5053;
+                    font: 400 22px/150% "Jost";
+                    letter-spacing: 0.22px;
+                    margin-block: 33px 45px;
+                }
+                .call {
+                    display: flex;
+                    gap: 0 15px;
+                    align-items: center;
+                    margin-block-end: 47px;
+                    h4 {
+                        color: #4D5053;
+                        font: 700 24px/150% "Jost"; 
+                        letter-spacing: 0.24px;
+                    }
+                    p { margin-block: 0; }
+                }
+                a {
+                    background-color: #292F36;
+                    padding: 26px 31px;
+                    color: #fff;
+                    border-radius: 18px;
+                    box-shadow: 0px 10px 20px 0px rgba(192, 192, 192, .35);
+                    div { display: inline; }
+                    span {
+                        font: 600 18px/125% "Jost";
+                    }
+                }
+            }
+            img { width: 590px; border-radius: 0px 326.5px 0px 123px; }
+        }
+
+    }
+}
