@@ -12,8 +12,13 @@ import ProjectCard4 from "../src/img/project-cards/card 4.png";
 const Container = (props) => {
   return (<div className="container">{props.children}</div>)
 }
+function showMenu() {
+  let header = document.querySelector("header");
+  let burgerMenu = document.querySelector(".burger");
+  burgerMenu.classList.toggle("open");
+  header.classList.toggle("show");
+}
 class HomePage extends React.Component {
-  class
   render() {
     return (
       <>
@@ -35,10 +40,12 @@ class HomePage extends React.Component {
                 <li><a href="/contact">Contact</a></li>
               </ul>
             </nav>
-            <div className="burger">
-              <div className="line"></div>
-              <div className="line"></div>
-              <div className="line"></div>
+            <div className="burger-menu">
+              <div className="burger" onClick={showMenu}>
+                <div className="line"></div>
+                <div className="line"></div>
+                <div className="line"></div>
+              </div>
             </div>
           </Container>
         </header>
