@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Jost&display=swap');
-
 * {
     margin: 0;
     padding: 0;
@@ -9,49 +8,39 @@
     -webkit-tap-highlight-color: transparent;
     scroll-behavior: smooth;
 }
-
 :root {
     --primary-dark: #292F36;
 }
-
 .container {
     width: min(100%, 1100px);
     margin-inline: auto;
-
     @media (max-width: 1100px) {
         padding-inline: 40px;
     }
-
     @media (max-width: 800px) {
         padding-inline: 30px;
     }
-
     @media (max-width: 768px) {
         padding-inline: 20px;
     }
-
     @media (max-width: 575px) {
         padding-inline: 10px;
     }
 }
-
 .text-center {
     margin: auto;
     text-align: center;
-
     h1 {
         color: var(--primary-dark);
         font: 400 50px/125% "DM Serif Display";
         letter-spacing: 1px;
     }
-
     p {
         color: #4D5053;
         font: 400 22px/150% "Jost";
         letter-spacing: .22px;
     }
 }
-
 header {
     width: 100%;
     height: 80px;
@@ -60,23 +49,18 @@ header {
     background-color: #fff;
     z-index: 1;
     transition: height .5s;
-
     @media (max-width: 1100px) {
-        padding-inline: 70px;
+        padding-inline: 40px;
     }
-
-    @media (max-width: 900px) {
-        padding-inline: 50px;
-    }
-
-    @media (max-width: 768px) {
+    @media (max-width: 800px) {
         padding-inline: 30px;
     }
-
+    @media (max-width: 768px) {
+        padding-inline: 20px;
+    }
     @media (max-width: 575px) {
         padding-inline: 10px;
     }
-
     &.show {
         height: 220px;
         nav {
@@ -84,25 +68,23 @@ header {
             overflow: auto;
         }
     }
-
     .container {
         display: flex;
         justify-content: space-between;
         align-items: center;
         height: 100%;
-        @media (max-width: 1100px) {
+        padding-inline: 0;
+        @media (max-width: 900px) {
             align-items: flex-start;
             padding: 0;
         }
     }
-
     .logo {
         display: flex;
         align-items: center;
         gap: 0 5px;
         align-content: center;
         height: 80px;
-
         span {
             color: var(--primary-dark);
             font: 400 40px/125% "DM Serif Display";
@@ -110,14 +92,14 @@ header {
     }
     .burger-menu {
         display: none;
-        @media (max-width: 1100px) {
+        @media (max-width: 900px) {
             display: flex;
             height: 80px;
             align-items: center;
         }
         .burger { 
             transform: scale(1.3);   
-            @media (max-width: 1100px) {
+            @media (max-width: 900px) {
                 cursor: pointer;
                 --gap: 5px;
                 --height-bar: 2px;
@@ -186,11 +168,10 @@ header {
             display: flex;
             gap: 35px;
             align-items: center;
-
             @media (max-width: 900px) {
                 display: block;
             }
-            li { &:nth-child(6) { margin-block-end: 10px; } }
+            li { &:nth-child(6) { @media (max-width: 900px) { margin-block-end: 10px; } } }
             li a {
                 color: var(--primary-dark);
                 font: 400 18px/125% "Jost";
@@ -201,12 +182,10 @@ header {
                     display: inline-block;
                     margin-top: 15px;
                 }
-
                 &.active,
                 &:hover {
                     color: #CDA274;
                 }
-
                 &:hover::after {
                     transform-origin: left;
                     transform: scaleX(1);
@@ -227,39 +206,34 @@ header {
         }
     }
 }
-
 section {
     margin-block-start: 128px;
-
     &.hero {
         margin-block-start: 0;
         width: 100%;
         height: 100vh;
         background: fixed url("../img/hero.png") no-repeat center center / cover;
-
         @media (min-width: 1440px) {
             height: 700px;
         }
-
         @media (min-width: 1320px) {
             height: 630px;
         }
-
+        @media (max-width: 1100px) {
+            height: 580px;
+        }
         .text {
             padding-top: 150px;
             width: min(100%, 567px);
-
             h1 {
                 color: #292F36;
                 font: 400 65px/125% "DM Serif Display";
             }
-
             p {
                 color: #4D5053;
                 font: 400 22px/150% "Jost";
                 letter-spacing: .22px;
             }
-
             a {
                 border-radius: 18px;
                 background: #292F36;
@@ -270,52 +244,44 @@ section {
                 color: #fff;
                 font: 600 18px/125% "Jost";
                 letter-spacing: .36px;
-
                 svg {
                     margin-left: 10px;
                 }
-
                 div {
                     display: inline;
                 }
             }
         }
     }
-
     &.info-cards {
         .container {
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
-
+            @media (max-width: 1094px) { justify-content: center; gap: 30px; }
             .card {
                 width: min(100%, 338px);
                 text-align: center;
                 padding-inline: 10px;
-
                 h3 {
                     color: var(--primary-dark);
                     font: 400 25px/125% "DM Serif Display";
                 }
-
                 p {
                     color: #4D5053;
                     font: 400 22px/150% "Jost";
                     letter-spacing: .22px;
                     margin-top: 20px;
                 }
-
                 a {
                     color: #4D5053;
                     font: 600 18px/125% "Jost";
                     letter-spacing: .36px;
                     display: inline-block;
                     margin-block-start: 30px;
-
                     div {
                         display: inline;
                     }
-
                     svg {
                         margin-inline-start: 12px;
                     }
@@ -323,130 +289,125 @@ section {
             }
         }
     }
-
     &.about {
         .container {
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
-
+            @media (max-width: 1105px) {
+                padding-inline: 10px;
+            }
+            @media (max-width: 1083px) {
+                justify-content: center;
+                text-align: center;
+                gap: 30px;
+            }
             .text {
                 width: min(100%, 472px);
-
+                @media (max-width: 1083px) {
+                    width: min(100%, 522px);
+                }
                 h1 {
                     color: var(--primary-dark);
                     font: 400 50px/125% "DM Serif Display";
                     letter-spacing: 1px;
                 }
-
                 p {
                     color: #4D5053;
                     font: 400 22px/150% "Jost";
                     letter-spacing: .22px;
                     margin-block: 33px 45px;
                 }
-
                 .call {
                     display: flex;
                     gap: 0 15px;
                     align-items: center;
                     margin-block-end: 47px;
-
+                    @media (max-width: 1083px) {
+                        justify-content: center;
+                        text-align: start;
+                    }
                     h4 {
                         color: #4D5053;
                         font: 700 24px/150% "Jost";
                         letter-spacing: .24px;
                     }
-
                     p {
                         margin-block: 0;
                     }
                 }
-
                 a {
                     background-color: #292F36;
                     padding: 26px 31px;
                     color: #fff;
                     border-radius: 18px;
                     box-shadow: 0px 10px 20px 0px rgba(192, 192, 192, .35);
-
                     div {
                         display: inline;
                     }
-
                     span {
                         font: 600 18px/125% "Jost";
                     }
                 }
             }
-
             img {
                 width: 590px;
                 border-radius: 0px 326.5px 0px 123px;
+                @media (max-width: 1083px) { margin-top: 30px; }
             }
         }
     }
-
     &.clients {
         width: min(100%, 1100px);
         margin: 128px auto auto;
         background-color: #F4F0EC;
         border-radius: 30px;
         padding: 88px 25px;
-
         .text-center {
             width: min(100%, 547px);
         }
-
         .container {
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
-
+            @media (max-width: 1100px) { justify-content: center; gap: 30px; }
             .card {
                 width: min(100%, 340px);
                 padding: 53px 24px;
                 background-color: #fff;
                 border-radius: 15px;
                 margin-block: 38px 0;
-
+                &:nth-child(3) { @media (max-width: 1100px) { margin-block: 0; } }
                 &:not(:nth-child(2)) {
                     p {
                         margin-block: 25px 33px;
                     }
-
                 }
-
                 &:not(:nth-child(2)),
                 &:nth-child(2) {
                     .card-header p {
                         margin: 0;
                     }
                 }
-
                 img {
                     border-radius: 50%;
                 }
-
                 &-header {
                     display: flex;
                     gap: 0 18px;
                     align-items: center;
                     flex-wrap: wrap;
-
                     h3 {
                         color: var(--primary-dark);
                         font: 400 25px/150% "DM Serif Display";
                         letter-spacing: .25px;
                     }
-
                     p {
                         color: #4D5053;
                         font: 400 18px/150% "Jost";
                         letter-spacing: .18px;
                     }
                 }
-
                 p {
                     color: #4D5053;
                     font: 400 22px/150% "Jost";
@@ -456,51 +417,54 @@ section {
             }
         }
     }
-
     &.brands {
         .container {
             display: flex;
             align-items: center;
             justify-content: space-around;
             flex-wrap: wrap;
+            @media (max-width: 980px) { justify-content: center; gap: 30px; }
+            @media (max-width: 862px) { padding-inline: 120px; }
+            @media (max-width: 700px) { padding-inline: 60px; }
+            @media (max-width: 579px) { padding-inline: 30px; flex-direction: column; }
         }
     }
-
     &.projects {
         .text-center {
             width: min(100%, 737px);
+            @media (max-width: 737px) { padding-inline: 30px; }
+            @media (max-width: 575px) { padding-inline: 10px; }
         }
-
         .container {
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
             margin-block: 33px;
-
+            @media (max-width: 1230px) { padding-inline: 30px; }
+            @media (max-width: 1130px) { gap: 0 23px; }
+            @media (max-width: 1059px) { justify-content: center; }
             .card {
                 margin-top: 58px;
                 width: min(100%, 518px);
-
+                @media (max-width: 1130px) {
+                    width: min(100%, 488px);
+                }
                 img {
                     width: 100%;
                 }
-
                 a.card-body {
                     display: flex;
                     align-items: center;
                     justify-content: space-between;
                     flex-wrap: wrap;
-
                     svg {
                         width: min(100%, 50px);
                     }
-
                     h3 {
                         color: var(--primary-dark);
                         font: 400 25px/125% "DM Serif Display";
                         letter-spacing: .5px;
                     }
-
                     p {
                         color: #4D5053;
                         font: 400 22px/150% "Jost";
@@ -510,49 +474,39 @@ section {
             }
         }
     }
-
     &.number {
         width: 100%;
         padding-block: 150px;
         background-color: #F4F0EC;
-
         .container {
             display: flex;
             justify-content: space-around;
-
             .number-item {
                 &:not(:nth-child(4)) {
                     border-right: 1px solid #CDA274;
                 }
-
                 &:nth-child(1) {
                     width: min(100%, 246px);
                     padding-right: 50px;
                 }
-
                 &:nth-child(2) {
                     width: min(100%, 223px);
                     padding-right: 66px;
                 }
-
                 &:nth-child(3) {
                     width: min(100%, 214px);
                     padding-right: 54px;
                 }
-
                 &:nth-child(4) {
                     width: min(100%, 171px);
                 }
-
                 text-align: center;
-
                 h1 {
                     color: #CDA274;
                     font: 400 85px/125% "DM Serif Display";
                     letter-spacing: 1.7px;
                     margin-block-end: 16px;
                 }
-
                 p {
                     color: #4D5053;
                     font: 400 22px/150% "Jost";
@@ -561,32 +515,27 @@ section {
             }
         }
     }
-
     &.news {
         .text-center {
             width: min(100%, 811px);
         }
-
         .container {
             display: flex;
             align-items: center;
             justify-content: space-between;
             flex-wrap: wrap;
             margin-block-start: 52px;
-
             .card {
                 width: min(100%, 342px);
                 padding: 20px;
                 border-radius: 62px;
                 border: 1px solid #E7E7E7;
                 box-shadow: 0px 10px 30px 0px rgba(255, 255, 255, .25);
-
                 .card-bg {
                     width: 100%;
                     height: 290px;
                     border-radius: 25px 25px 0 0;
                     position: relative;
-
                     p {
                         position: absolute;
                         background-color: #fff;
@@ -599,41 +548,34 @@ section {
                         border-radius: 5px;
                     }
                 }
-
                 &:nth-child(1) {
                     .card-bg {
                         background: url("../../src/img/news-cards/news\ 1.png") no-repeat center center / cover;
                     }
                 }
-
                 &:nth-child(2) {
                     background: #F4F0EC;
-
                     .card-bg {
                         background: url("../../src/img/news-cards/news\ 2.png") no-repeat center center / cover;
                     }
                 }
-
                 &:nth-child(3) {
                     .card-bg {
                         background: url("../../src/img/news-cards/news\ 3.png") no-repeat center center / cover;
                     }
                 }
-
                 h3 {
                     color: var(--primary-dark);
                     font: 400 25px/125% "DM Serif Display";
                     letter-spacing: .5px;
                     margin-block: 20px 15px;
                 }
-
                 div {
                     display: flex;
                     align-items: center;
                     justify-content: space-between;
                     flex-wrap: wrap;
                     width: 100%;
-
                     p {
                         color: #4D5053;
                         font: 400 16px/150% "Jost";
@@ -643,22 +585,18 @@ section {
             }
         }
     }
-
     &.join {
         width: min(100%, 1100px);
         padding-block: 80px;
         background-color: #292F36;
         border-radius: 70px;
         margin-inline: auto;
-
         .text-center {
-
             h1,
             p {
                 color: #fff;
             }
         }
-
         a {
             padding: 26px 37px;
             background: #CDA274;
@@ -666,46 +604,37 @@ section {
             border-radius: 18px;
             display: inline-block;
             margin-block-start: 32px;
-
             div {
                 display: inline;
             }
-
             span {
                 color: #fff;
                 font: 600 18px/125% "Jost";
                 letter-spacing: .36px;
             }
-
             svg {
                 margin-left: 11px;
             }
         }
     }
 }
-
 footer {
     margin-block-start: 135px;
-
     .container {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
-
         .footer-col {
             &:nth-child(1) {
                 width: min(100%, 393px);
             }
-
             &:nth-child(2),
             &:nth-child(3) {
                 width: min(100%, 125px);
             }
-
             &:nth-child(4) {
                 width: min(100%, 258px);
             }
-
             .logo {
                 color: var(--primary-dark);
                 font: 400 40px/125% "DM Serif Display";
@@ -713,28 +642,23 @@ footer {
                 align-items: center;
                 gap: 0 5px;
             }
-
             p {
                 margin-block: 18px 30px;
             }
-
             p,
             ul li a {
                 color: #4D5053;
                 font: 400 22px/150% "Jost";
                 letter-spacing: .22px;
             }
-
             h4 {
                 color: var(--primary-dark);
                 font: 400 25px/125% "DM Serif Display";
             }
-
             ul li a {
                 margin-top: 20px;
                 display: inline-block;
             }
-
             .social-links {
                 display: flex;
                 align-items: center;
@@ -743,13 +667,11 @@ footer {
             }
         }
     }
-
     .copyright {
         width: 100%;
         height: 120px;
         display: grid;
         place-items: center;
-
         p {
             color: #4D5053;
             font: 400 22px/150% "Jost";
