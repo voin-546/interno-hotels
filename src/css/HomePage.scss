@@ -25,7 +25,7 @@ a div svg { transform: translate(5px, 3px); }
       section.number {h1 { color: #292F36 !important; } p { color: #555 !important; } }
       section.news .card { .card-bg { p { background-color: #292F36 !important; } } svg { circle { fill: #4D5053; } path { fill: none; } } &:nth-child(2) { background-color: #4D5053 !important; svg circle { fill: #555; } } }
       section.join { .container { background-color: #1F2022 !important; } svg path { fill: none;}}
-      footer { svg rect, svg path { fill: #fff !important; } }
+      footer {a.logo svg path { fill: #CDA274 !important; } svg rect, svg path { fill: #fff !important; } }
     }
 }
 @media (prefers-color-scheme: light) {
