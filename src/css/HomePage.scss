@@ -16,7 +16,7 @@
     :root { --primary-dark: #fff; --secondary-dark: #c0c3c5;}
     body {
       background-color: #292F36;
-      header { background-color: #292F36 !important; .logo { svg path { fill: #CDA274; } } }  
+      header { background-color: #292F36 !important; nav { background-color: #292F36; } .logo { svg path { fill: #CDA274; } } }  
       section.clients, section.number { background-color: #CDA274; .card { background-color: #292F36 !important; } }
       section.brands a { svg path { fill: #fff;} &:nth-child(2) svg path:nth-child(1) { fill: #292F36 !important;} &:nth-child(3) { svg path:nth-child(1) { fill: #4D5053 !important;} } }
       section.projects { svg { circle { fill: #4D5053; } path { fill: none; } } }
