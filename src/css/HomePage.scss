@@ -10,6 +10,24 @@
 }
 :root {
     --primary-dark: #292F36;
+    --secondary-dark: #4D5053;
+}
+@media (prefers-color-scheme: dark) {
+    :root { --primary-dark: #fff; --secondary-dark: #c0c3c5;}
+    body {
+      background-color: #292F36;
+      header { background-color: #292F36 !important; .logo { svg path { fill: #CDA274; } } }  
+      section.clients, section.number { background-color: #CDA274; .card { background-color: #292F36 !important; } }
+      section.brands a { svg path { fill: #fff;} &:nth-child(2) svg path:nth-child(1) { fill: #292F36 !important;} &:nth-child(3) { svg path:nth-child(1) { fill: #4D5053 !important;} } }
+      section.projects { svg { circle { fill: #4D5053; } path { fill: none; } } }
+      section.number {h1 { color: #292F36 !important; } p { color: #555 !important; } }
+      section.news .card { .card-bg { p { background-color: #292F36 !important; } } svg { circle { fill: #4D5053; } path { fill: none; } } &:nth-child(2) { background-color: #4D5053 !important; svg circle { fill: #555; } } }
+      section.join { .container { background-color: #1F2022 !important; } svg path { fill: none;}}
+      footer { svg rect, svg path { fill: #fff !important; } }
+    }
+}
+@media (prefers-color-scheme: light) {
+    section a svg path { fill: currentColor; }
 }
 .container {
     width: min(100%, 1100px);
@@ -36,7 +54,7 @@
         letter-spacing: 1px;
     }
     p {
-        color: #4D5053;
+        color: var(--secondary-dark);
         font: 400 22px/150% "Jost";
         letter-spacing: .22px;
     }
@@ -176,8 +194,7 @@ header {
                 color: var(--primary-dark);
                 font: 400 18px/125% "Jost";
                 transition: color .5s;
-                position: relative;
-                
+                position: relative;                
                 @media (max-width: 900px) {
                     display: inline-block;
                     margin-top: 15px;
@@ -186,7 +203,7 @@ header {
                 &:hover {
                     color: #CDA274;
                 }
-                &:hover::after {
+                &:hover::after, &.active::after {
                     transform-origin: left;
                     transform: scaleX(1);
                 }
@@ -222,6 +239,7 @@ section {
         @media (max-width: 1100px) {
             height: 580px;
         }
+        @media (max-width: 440px) { height: 100%; padding-block-end: 100px; }
         .text {
             padding-top: 150px;
             width: min(100%, 567px);
@@ -268,13 +286,13 @@ section {
                     font: 400 25px/125% "DM Serif Display";
                 }
                 p {
-                    color: #4D5053;
+                    color: var(--secondary-dark);
                     font: 400 22px/150% "Jost";
                     letter-spacing: .22px;
                     margin-top: 20px;
                 }
                 a {
-                    color: #4D5053;
+                    color: var(--secondary-dark);
                     font: 600 18px/125% "Jost";
                     letter-spacing: .36px;
                     display: inline-block;
@@ -313,7 +331,7 @@ section {
                     letter-spacing: 1px;
                 }
                 p {
-                    color: #4D5053;
+                    color: var(--secondary-dark);
                     font: 400 22px/150% "Jost";
                     letter-spacing: .22px;
                     margin-block: 33px 45px;
@@ -328,7 +346,7 @@ section {
                         text-align: start;
                     }
                     h4 {
-                        color: #4D5053;
+                        color: var(--secondary-dark);
                         font: 700 24px/150% "Jost";
                         letter-spacing: .24px;
                     }
@@ -351,7 +369,7 @@ section {
                 }
             }
             img {
-                width: 590px;
+                width: min(100%, 590px);
                 border-radius: 0px 326.5px 0px 123px;
                 @media (max-width: 1083px) { margin-top: 30px; }
             }
@@ -403,13 +421,13 @@ section {
                         letter-spacing: .25px;
                     }
                     p {
-                        color: #4D5053;
+                        color: var(--secondary-dark);
                         font: 400 18px/150% "Jost";
                         letter-spacing: .18px;
                     }
                 }
                 p {
-                    color: #4D5053;
+                    color: var(--secondary-dark);
                     font: 400 22px/150% "Jost";
                     letter-spacing: .22px;
                     margin-top: 25px;
@@ -466,7 +484,7 @@ section {
                         letter-spacing: .5px;
                     }
                     p {
-                        color: #4D5053;
+                        color: var(--secondary-dark);
                         font: 400 22px/150% "Jost";
                         letter-spacing: .22px;
                     }
@@ -481,24 +499,33 @@ section {
         .container {
             display: flex;
             justify-content: space-around;
+            flex-wrap: wrap;
+            @media (max-width: 1064px) { padding-inline: 200px; justify-content: center; gap: 30px; }
+            @media (max-width: 1000px) {padding-inline: 100px }
+            @media (max-width: 722px) { padding-inline: 50px; }
             .number-item {
                 &:not(:nth-child(4)) {
                     border-right: 1px solid #CDA274;
+                    @media (max-width: 1064px) { border: none; }
                 }
                 &:nth-child(1) {
                     width: min(100%, 246px);
                     padding-right: 50px;
+                    @media (max-width: 1064px) { padding-inline-end: 0; }
                 }
                 &:nth-child(2) {
                     width: min(100%, 223px);
                     padding-right: 66px;
+                    @media (max-width: 1064px) { width: min(100%, 246px); padding-inline-end: 0;}
                 }
                 &:nth-child(3) {
                     width: min(100%, 214px);
                     padding-right: 54px;
+                    @media (max-width: 1064px) { width: min(100%, 246px); padding-inline-end: 0;}
                 }
                 &:nth-child(4) {
                     width: min(100%, 171px);
+                    @media (max-width: 1064px) { width: min(100%, 246px); padding-inline-end: 0;}
                 }
                 text-align: center;
                 h1 {
@@ -508,7 +535,7 @@ section {
                     margin-block-end: 16px;
                 }
                 p {
-                    color: #4D5053;
+                    color: var(--secondary-dark);
                     font: 400 22px/150% "Jost";
                     letter-spacing: .22px;
                 }
@@ -518,6 +545,7 @@ section {
     &.news {
         .text-center {
             width: min(100%, 811px);
+            @media (max-width: 670px) { padding-inline: 10px; }
         }
         .container {
             display: flex;
@@ -525,6 +553,7 @@ section {
             justify-content: space-between;
             flex-wrap: wrap;
             margin-block-start: 52px;
+            @media (max-width: 1130px) { padding-inline: 10px; justify-content: center; gap: 30px; }
             .card {
                 width: min(100%, 342px);
                 padding: 20px;
@@ -540,7 +569,7 @@ section {
                         position: absolute;
                         background-color: #fff;
                         padding: 4px 8px;
-                        color: #4D5053;
+                        color: var(--secondary-dark);
                         font: 400 16px/150% "Jost";
                         letter-spacing: .16px;
                         bottom: 20px;
@@ -577,7 +606,7 @@ section {
                     flex-wrap: wrap;
                     width: 100%;
                     p {
-                        color: #4D5053;
+                        color: var(--secondary-dark);
                         font: 400 16px/150% "Jost";
                         letter-spacing: .16px;
                     }
@@ -586,11 +615,20 @@ section {
         }
     }
     &.join {
-        width: min(100%, 1100px);
-        padding-block: 80px;
-        background-color: #292F36;
-        border-radius: 70px;
-        margin-inline: auto;
+        @media (max-width: 1100px) { padding-inline: 40px; }
+        @media (max-width: 800px) { padding-inline: 30px; }
+        @media (max-width: 768px) { padding-inline: 20px; }
+        @media (max-width: 575px) { padding-inline: 10px; }
+        .container {
+            width: min(100%, 1100px);
+            padding-block: 80px;
+            background-color: #292F36;
+            border-radius: 70px;
+            margin-inline: auto;
+            @media (max-width: 900px) { border-radius: 50px;  padding-block: 60px; }
+            @media (max-width: 768px) { border-radius: 30px; padding-block: 40px;}
+            @media (max-width: 575px) { border-radius: 20px; padding-block: 20px; }
+        }
         .text-center {
             h1,
             p {
@@ -620,20 +658,34 @@ section {
 }
 footer {
     margin-block-start: 135px;
+    @media (max-width: 1110px) { padding-inline: 10px; }
+    @media (max-width: 1060px) { padding-inline: 0; }
     .container {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
+        @media (max-width: 1060px) { gap: 50px; }
+        @media (max-width: 768px) { gap: 50px; justify-content: space-between; }
+        @media (max-width: 700px) { justify-content: center; flex-direction: column; text-align: center; }
         .footer-col {
             &:nth-child(1) {
                 width: min(100%, 393px);
+                @media (max-width: 1060px) { width: min(100%, 40%); }
+                @media (max-width: 725px) { width: min(100%, 45%); }
+                @media (max-width: 700px) { margin: auto; }
             }
             &:nth-child(2),
             &:nth-child(3) {
                 width: min(100%, 125px);
+                @media (max-width: 1060px) { width: min(100%, 40%); }
+                @media (max-width: 725px) { width: min(100%, 45%); }
+                @media (max-width: 700px) { margin: auto; }
             }
             &:nth-child(4) {
                 width: min(100%, 258px);
+                @media (max-width: 1060px) { width: min(100%, 40%); }
+                @media (max-width: 725px) { width: min(100%, 45%); }
+                @media (max-width: 700px) { margin: auto; }
             }
             .logo {
                 color: var(--primary-dark);
@@ -641,13 +693,14 @@ footer {
                 display: flex;
                 align-items: center;
                 gap: 0 5px;
+                @media (max-width: 700px) { justify-content: center; }
             }
             p {
                 margin-block: 18px 30px;
             }
             p,
             ul li a {
-                color: #4D5053;
+                color: var(--secondary-dark);
                 font: 400 22px/150% "Jost";
                 letter-spacing: .22px;
             }
@@ -673,9 +726,11 @@ footer {
         display: grid;
         place-items: center;
         p {
-            color: #4D5053;
+            color: var(--secondary-dark);
             font: 400 22px/150% "Jost";
             letter-spacing: .22px;
+            text-align: center;
+            @media (max-width: 440px) { padding-inline: 10px; }
         }
     }
 }
