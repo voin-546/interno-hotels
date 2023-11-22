@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ReactDOMClient from "react-dom/client";
 import "./css/HomePage.scss";
 import AboutImage from "../src/img/about.jpg";
@@ -9,6 +9,8 @@ import ProjectCard1 from "../src/img/project-cards/card 1.png";
 import ProjectCard2 from "../src/img/project-cards/card 2.png";
 import ProjectCard3 from "../src/img/project-cards/card 3.png";
 import ProjectCard4 from "../src/img/project-cards/card 4.png";
+import Aos from "aos";
+import "aos/dist/aos.css"
 const Container = (props) => {
   return (<div className="container">{props.children}</div>)
 }
@@ -18,8 +20,12 @@ function showMenu() {
   burgerMenu.classList.toggle("open");
   header.classList.toggle("show");
 }
-class HomePage extends React.Component {
-  render() {
+function HomePage () {
+    useEffect(() => {
+      Aos.init({
+        duration: 1200,
+      })
+    }, []);
     return (
       <>
         <header>
@@ -52,9 +58,9 @@ class HomePage extends React.Component {
         <section className="hero">
           <Container>
             <div className="text">
-              <h1>Let Your Home <br />Be Unique</h1>
-              <p>There are many variations of the passages of lorem Ipsum fromavailable,variations of the passages.</p>
-              <a href="/">
+              <h1 data-aos="fade-up">Let Your Home <br />Be Unique</h1>
+              <p data-aos="fade-up" data-aos-delay="300">There are many variations of the passages of lorem Ipsum fromavailable,variations of the passages.</p>
+              <a href="/contact" data-aos="fade-up" data-aos-delay="400">
                 <div>Get Started
                   <span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17" fill="none">
@@ -68,7 +74,7 @@ class HomePage extends React.Component {
         </section>
         <section className="info-cards">
           <Container>
-            <div className="card">
+            <div className="card" data-aos="fade-up">
               <h3>Project Plan</h3>
               <p>There are many variations of the passages of lorem Ipsum from
                 available, majority.</p>
@@ -83,7 +89,7 @@ class HomePage extends React.Component {
                 </div>
               </a>
             </div>
-            <div className="card">
+            <div className="card" data-aos="fade-up" data-aos-delay="300">
               <h3>Interior Work</h3>
               <p>There are many variations of the passages of lorem Ipsum from
                 available, majority.</p>
@@ -98,7 +104,7 @@ class HomePage extends React.Component {
                 </div>
               </a>
             </div>
-            <div className="card">
+            <div className="card" data-aos="fade-up" data-aos-delay="400">
               <h3>Realization</h3>
               <p>There are many variations of the passages of lorem Ipsum from
                 available, majority.</p>
@@ -118,19 +124,19 @@ class HomePage extends React.Component {
         <section className="about">
           <Container>
             <div className="text">
-              <h1>We Create The Art Of Stylish Living Stylishly</h1>
-              <p>It is a long established fact that a reader will be distracted by the of readable content of a page when lookings at its layouts the points of using that it has a more-or-less normal.</p>
-              <div className="call">
+              <h1 data-aos="fade-up">We Create The Art Of Stylish Living Stylishly</h1>
+              <p data-aos="fade-up" data-aos-delay="300">It is a long established fact that a reader will be distracted by the of readable content of a page when lookings at its layouts the points of using that it has a more-or-less normal.</p>
+              <a href="tel:012345678" className="call">
                 <svg xmlns="http://www.w3.org/2000/svg" width="93" height="93" viewBox="0 0 93 93" fill="none">
                   <circle cx="46.5" cy="46.5" r="46.5" fill="#F4F0EC" />
                   <path d="M61.0012 55.0749C59.7796 53.8442 56.8211 52.0482 55.3857 51.3243C53.5164 50.3828 53.3625 50.3059 51.8933 51.3974C50.9133 52.1258 50.2617 52.7766 49.1148 52.532C47.9678 52.2874 45.4754 50.9082 43.2931 48.7329C41.1107 46.5576 39.6514 43.9931 39.4061 42.8501C39.1607 41.7071 39.8222 41.0632 40.5438 40.081C41.5607 38.6964 41.4838 38.4657 40.6145 36.5965C39.9368 35.1427 38.0883 32.2121 36.8529 30.9967C35.5313 29.6914 35.5313 29.9222 34.6798 30.276C33.9865 30.5677 33.3214 30.9222 32.6928 31.3352C31.462 32.1529 30.7789 32.8321 30.3012 33.8528C29.8235 34.8735 29.6089 37.2665 32.0759 41.7478C34.5429 46.2292 36.2737 48.5206 39.8561 52.0928C43.4385 55.6649 46.1931 57.5856 50.2202 59.844C55.2018 62.6339 57.1126 62.09 58.1365 61.6131C59.1604 61.1362 59.8427 60.4593 60.662 59.2286C61.076 58.6011 61.4314 57.9368 61.7235 57.2441C62.0781 56.3957 62.3089 56.3957 61.0012 55.0749Z" stroke="#CDA274" strokeWidth="2" strokeMiterlimit="10" />
                 </svg>
                 <div>
-                  <h4>012345678</h4>
-                  <p>Call Us Anytime</p>
+                  <h4 data-aos="fade-up" data-aos-delay="300">012345678</h4>
+                  <p data-aos="fade-up" data-aos-delay="300">Call Us Anytime</p>
                 </div>
-              </div>
-              <a href="/">
+              </a>
+              <a href="/" data-aos="fade-up" data-aos-delay="400">
                 <div>
                   <span>Get Free Estimate</span>
                   <span>
@@ -141,17 +147,17 @@ class HomePage extends React.Component {
                 </div>
               </a>
             </div>
-            <img src={AboutImage} alt="Kitchen" />
+            <img src={AboutImage} alt="Kitchen" data-aos="fade-left"/>
           </Container>
         </section>
         <section className="clients">
           <Container>
             <div className="text-center">
-              <h1>What the People Think About Us</h1>
+              <h1 data-aos="fade-up">What the People Think About Us</h1>
             </div>
           </Container>
           <Container>
-            <div className="card">
+            <div className="card" data-aos="fade-up">
               <div className="card-header">
                 <img src={Client1} alt="Client Photograph" />
                 <div>
@@ -161,7 +167,7 @@ class HomePage extends React.Component {
               </div>
               <p>Lorem Ipsum is simply dummy text of the typesetting industry. Ipsum has been.</p>
             </div>
-            <div className="card">
+            <div className="card" data-aos="fade-up" data-aos-delay="300">
               <div className="card-header">
                 <img src={Client2} alt="Client Photograph" />
                 <div>
@@ -171,7 +177,7 @@ class HomePage extends React.Component {
               </div>
               <p>Lorem Ipsum is simply dummy text of the typesetting industry. Ipsum has been scrambled it to make a type book.</p>
             </div>
-            <div className="card">
+            <div className="card" data-aos="fade-up" data-aos-delay="400">
               <div className="card-header">
                 <img src={Client3} alt="Clien Photograph" />
                 <div>
@@ -185,7 +191,7 @@ class HomePage extends React.Component {
         </section>
         <section className="brands">
           <div className="container">
-            <a href="/">
+            <a href="/" data-aos="fade-up">
               <svg xmlns="http://www.w3.org/2000/svg" width="132" height="44" viewBox="0 0 132 44" fill="none">
                 <path d="M11.6337 0.976501V1.16207L10.8629 1.34764V9.56977L11.6337 9.75534V9.94091H7.97946V9.75534L8.7503 9.56977V2.56098L5.7241 10.0694H5.33866L1.41317 2.56098V9.36993L2.44093 9.75534V9.94091H0V9.75534L1.02777 9.36993V1.34764L0.256931 1.16207V0.976501H1.85567C2.09834 0.976501 2.31246 1.00505 2.48376 1.06215C2.65505 1.11925 2.82637 1.19062 2.95484 1.29054C3.09758 1.39046 3.21178 1.50466 3.3117 1.63313C3.41162 1.7616 3.49728 1.91862 3.58292 2.07564L6.38072 7.42859L8.5219 2.07564C8.59327 1.89007 8.66466 1.73305 8.76459 1.60458C8.85023 1.47611 8.9644 1.36191 9.09287 1.26199C9.22134 1.16207 9.37839 1.0907 9.56396 1.04787C9.74953 1.00505 9.9779 0.976501 10.2634 0.976501H11.6337Z" fill="#292F36" />
                 <path d="M16.202 3.36041C16.7302 3.36041 17.2155 3.43179 17.6295 3.5888C18.0434 3.74582 18.4003 3.97422 18.7001 4.25971C18.9998 4.55947 19.214 4.91634 19.371 5.3303C19.528 5.74426 19.5994 6.22959 19.5994 6.75775C19.5994 7.28591 19.528 7.77124 19.371 8.1852C19.214 8.59917 18.9856 8.95603 18.7001 9.25579C18.4003 9.55556 18.0434 9.76968 17.6295 9.9267C17.2155 10.0837 16.7302 10.1551 16.202 10.1551C15.6739 10.1551 15.1885 10.0837 14.7746 9.9267C14.3606 9.76968 14.0038 9.54129 13.704 9.25579C13.4042 8.95603 13.1901 8.59917 13.0331 8.1852C12.8761 7.77124 12.8047 7.28591 12.8047 6.75775C12.8047 6.22959 12.8761 5.74426 13.0331 5.3303C13.1901 4.91634 13.4185 4.55947 13.704 4.25971C14.0038 3.95994 14.3606 3.74582 14.7746 3.5888C15.1885 3.43179 15.6596 3.36041 16.202 3.36041ZM16.202 9.91242C16.3448 9.91242 16.4875 9.8696 16.6445 9.76968C16.7873 9.66976 16.9157 9.51274 17.0299 9.27007C17.1441 9.0274 17.2441 8.71336 17.3154 8.31368C17.3868 7.89971 17.4296 7.38583 17.4296 6.77203C17.4296 6.14395 17.3868 5.63006 17.3154 5.23038C17.2441 4.83069 17.1441 4.50237 17.0299 4.27398C16.9157 4.04559 16.7873 3.8743 16.6445 3.77438C16.5018 3.67445 16.3591 3.63163 16.202 3.63163C16.0593 3.63163 15.9165 3.67445 15.7595 3.77438C15.6168 3.8743 15.4883 4.03131 15.3741 4.27398C15.2599 4.51665 15.16 4.83069 15.0886 5.23038C15.0172 5.64434 14.9744 6.15822 14.9744 6.77203C14.9744 7.4001 15.0172 7.91399 15.0886 8.31368C15.16 8.71336 15.2599 9.04168 15.3741 9.27007C15.4883 9.49846 15.6168 9.66976 15.7595 9.76968C15.9023 9.85533 16.045 9.91242 16.202 9.91242Z" fill="#292F36" />
@@ -201,7 +207,7 @@ class HomePage extends React.Component {
                 <path d="M131.283 42.4583V28.3408L119.007 18.4628V42.4583H131.283Z" fill="#292F36" />
               </svg>
             </a>
-            <a href="/">
+            <a href="/" data-aos="fade-up" data-aos-delay="300">
               <svg xmlns="http://www.w3.org/2000/svg" width="103" height="103" viewBox="0 0 103 103" fill="none">
                 <path d="M51.4433 101.606C79.3039 101.606 101.889 79.0206 101.889 51.16C101.889 23.2993 79.3039 0.713745 51.4433 0.713745C23.5826 0.713745 0.99707 23.2993 0.99707 51.16C0.99707 79.0206 23.5826 101.606 51.4433 101.606Z" fill="#fff" />
                 <path d="M51.4431 102.32C23.2367 102.32 0.283203 79.3664 0.283203 51.1599C0.283203 22.9535 23.2367 0 51.4431 0C79.6496 0 102.603 22.9535 102.603 51.1599C102.603 79.3664 79.6496 102.32 51.4431 102.32ZM51.4431 1.42745C24.0218 1.42745 1.71066 23.7386 1.71066 51.1599C1.71066 78.5813 24.0218 100.892 51.4431 100.892C78.8645 100.892 101.176 78.5813 101.176 51.1599C101.176 23.7386 78.8645 1.42745 51.4431 1.42745Z" fill="#292F36" />
@@ -230,7 +236,7 @@ class HomePage extends React.Component {
                 <path d="M51.4436 83.5489C33.5862 83.5489 19.0547 69.0174 19.0547 51.16C19.0547 33.3025 33.5862 18.7711 51.4436 18.7711C69.3011 18.7711 83.8325 33.3025 83.8325 51.16C83.8325 69.0174 69.3011 83.5489 51.4436 83.5489ZM51.4436 20.1985C34.3713 20.1985 20.4821 34.0876 20.4821 51.16C20.4821 68.2323 34.3713 82.1214 51.4436 82.1214C68.516 82.1214 82.4051 68.2323 82.4051 51.16C82.4051 34.0876 68.516 20.1985 51.4436 20.1985Z" fill="#292F36" />
               </svg>
             </a>
-            <a href="/">
+            <a href="/" data-aos="fade-up" data-aos-delay="400">
               <svg xmlns="http://www.w3.org/2000/svg" width="164" height="44" viewBox="0 0 164 44" fill="none">
                 <path d="M35.3997 43.5479H8.58142C4.17427 43.5479 0.602539 39.9762 0.602539 35.569V8.7508C0.602539 4.34365 4.17427 0.771912 8.58142 0.771912H35.3997C39.8068 0.771912 43.3786 4.34365 43.3786 8.7508V35.569C43.3786 39.9762 39.8068 43.5479 35.3997 43.5479Z" fill="#292F36" />
                 <path d="M29.6972 22.5534C30.46 23.5099 30.8474 24.6238 30.8474 25.883C30.8474 27.7354 30.2299 29.1883 28.995 30.2175C27.76 31.2466 25.9923 31.7794 23.6918 31.7794H13.6426V10.1674H23.4497C25.6533 10.1674 27.3483 10.6517 28.547 11.6082C29.7456 12.5647 30.351 13.9328 30.351 15.7005C30.351 17.0081 29.9999 18.0857 29.3098 18.9575C28.6196 19.8292 27.7116 20.3861 26.5856 20.6525C27.9053 20.9673 28.9344 21.5969 29.6972 22.5534ZM18.8609 19.0059H22.2874C24.1035 19.0059 25.0116 18.231 25.0116 16.6812C25.0116 15.1315 24.0793 14.3566 22.2268 14.3566H18.8609V19.0059ZM25.4959 25.1565C25.4959 24.3816 25.2416 23.7763 24.7331 23.3404C24.2246 22.9045 23.4981 22.6866 22.5658 22.6866H18.873V27.5417H22.6022C24.5273 27.5296 25.4959 26.7426 25.4959 25.1565Z" fill="white" />
@@ -240,7 +246,7 @@ class HomePage extends React.Component {
                 <path d="M162.626 26.5731C161.718 28.2077 160.411 29.4911 158.716 30.4112C157.009 31.3314 155.011 31.7915 152.71 31.7915H144.55V10.1795H152.71C155.035 10.1795 157.045 10.6275 158.728 11.5234C160.423 12.4194 161.718 13.6786 162.626 15.3131C163.534 16.9476 163.982 18.8122 163.982 20.9431C163.982 23.0498 163.522 24.9265 162.626 26.5731ZM156.996 25.4835C158.122 24.4059 158.691 22.8803 158.691 20.931C158.691 18.9696 158.122 17.4562 156.996 16.3786C155.87 15.301 154.284 14.7562 152.238 14.7562H149.768V27.1059H152.238C154.284 27.1059 155.87 26.5731 156.996 25.4835Z" fill="#292F36" />
               </svg>
             </a>
-            <a href="/">
+            <a href="/" data-aos="fade-up" data-aos-delay="500">
               <svg xmlns="http://www.w3.org/2000/svg" width="146" height="45" viewBox="0 0 146 45" fill="none">
                 <path d="M21.2234 8.95747L22.294 8.72908C22.5652 8.72908 22.7936 8.78618 22.9507 8.90038C23.1077 9.01457 23.1933 9.12877 23.1933 9.22869C23.1933 9.32861 23.1648 9.48563 23.122 9.6712C23.0791 9.85677 22.6794 11.7696 21.9372 15.381C21.1949 18.9925 20.6525 21.6904 20.3099 23.4604C21.9657 21.205 23.9071 18.4358 26.1196 15.1383C28.3322 11.8409 29.6312 9.65693 30.0023 8.57206C30.1165 8.22947 30.2735 7.97253 30.4591 7.78696C30.6446 7.60139 30.8159 7.4872 30.9587 7.45865C31.1014 7.4301 31.3298 7.40155 31.6296 7.40155C31.9294 7.40155 32.2862 7.47292 32.7002 7.6014C33.1141 7.72987 33.3283 7.94398 33.3283 8.25802C33.3283 8.829 32.4718 10.4991 30.7731 13.2398C29.0744 15.9805 27.1188 18.8925 24.9206 21.9758C22.7223 25.0591 20.8951 27.5001 19.4249 29.2987C19.1679 29.6127 18.8396 29.784 18.4685 29.784C18.0973 29.784 17.6976 29.7127 17.2837 29.5842C16.8697 29.4557 16.6556 29.2273 16.6556 28.8847C16.6556 27.8141 17.5977 22.6468 19.4819 13.4111C17.8689 15.4952 15.9133 18.4072 13.6151 22.1329C11.217 25.987 9.86092 28.3851 9.54688 29.2987C9.37558 29.8554 9.17574 30.1837 8.94735 30.2694C8.79033 30.3407 8.61903 30.3693 8.44773 30.3693L7.2915 30.4977C7.06311 30.4977 6.86326 30.4406 6.66342 30.3122C6.47785 30.1837 6.37793 30.0552 6.37793 29.9125C6.37793 29.5271 6.92037 28.3566 7.99096 26.4152C9.06155 24.4739 10.332 22.3613 11.7737 20.0773C13.2154 17.7934 14.7143 15.5809 16.2845 13.4254C17.8547 11.27 19.068 9.81395 19.9245 9.08595C20.0958 8.92893 20.2956 8.85755 20.524 8.85755L21.2234 8.95747Z" fill="#292F36" />
                 <path d="M38.381 18.6358C39.1233 18.6358 39.4944 18.8927 39.4944 19.3923C39.4944 19.6635 39.4373 19.8634 39.3088 19.9918C39.1804 20.1203 38.9092 20.5343 38.4952 21.2623C38.0813 21.976 37.6245 22.8896 37.1248 24.0173C36.6252 25.1307 36.2969 26.0871 36.1542 26.8722C36.1256 26.9721 36.1114 27.1006 36.1114 27.2861C36.1114 27.8286 36.2541 28.0855 36.5539 28.0855C36.8536 28.0855 37.1962 27.9428 37.5959 27.6715C37.9956 27.386 38.3525 27.1006 38.6665 26.7722C38.9805 26.4582 39.2803 26.1299 39.5801 25.8016C39.8798 25.4733 40.0511 25.2734 40.1082 25.2306C40.1653 25.1878 40.251 25.1592 40.3652 25.1592C40.5507 25.1592 40.6649 25.302 40.7078 25.5875C40.7506 25.8729 40.7649 26.1584 40.7649 26.4725C40.7649 26.7865 40.7363 26.9864 40.6792 27.1006C40.3937 27.6573 39.7799 28.3282 38.8093 29.1133C37.8529 29.8984 36.9678 30.2838 36.1827 30.2838C35.3976 30.2838 34.8124 30.0411 34.4555 29.57C34.0987 29.099 33.8988 28.5566 33.8988 27.9856C33.8988 27.4003 33.9987 26.9007 34.1986 26.4582C33.3849 27.5145 32.4571 28.3995 31.415 29.1418C30.3587 29.8698 29.5165 30.241 28.8456 30.241C28.1747 30.241 27.6466 30.0411 27.2183 29.6414C26.6759 29.1418 26.4189 28.4566 26.4189 27.5716C26.4189 26.6866 26.6188 25.8016 27.0185 24.9023C27.4182 24.0173 27.9321 23.1893 28.5744 22.4613C29.2168 21.7191 29.9305 21.0482 30.7013 20.4486C32.3143 19.1782 33.8132 18.5501 35.1835 18.5501C35.7117 18.5501 36.1399 18.6358 36.4682 18.8071C36.7965 18.9783 37.0107 19.2067 37.0963 19.4637C37.3247 19.1068 37.5245 18.8927 37.6958 18.7928C37.8243 18.6786 38.067 18.6358 38.381 18.6358ZM36.4397 20.2631C34.7696 20.2631 33.0423 21.1909 31.258 23.0466C30.6299 23.7175 30.0447 24.5026 29.5023 25.4304C28.9598 26.3583 28.7029 26.9864 28.7029 27.3289C28.7029 27.6715 28.8028 27.8428 29.0027 27.8428C29.2739 27.8428 30.0304 27.3004 31.2866 26.2298C32.5427 25.1592 33.3707 24.3598 33.7703 23.846C34.2271 23.275 35.1121 22.0759 36.4397 20.2631Z" fill="#292F36" />
@@ -256,7 +262,7 @@ class HomePage extends React.Component {
                 <path d="M137.49 10.0281C134.307 8.67204 131.067 7.61572 127.783 6.7878C124.515 5.91705 121.203 5.30325 117.877 4.87502C116.221 4.61807 114.537 4.56098 112.881 4.36113C111.211 4.31831 109.555 4.14701 107.885 4.21839C107.057 4.23266 106.215 4.23266 105.387 4.21839C104.559 4.21839 103.717 4.30403 102.889 4.33258C102.061 4.38968 101.219 4.40396 100.391 4.4896L97.9068 4.78937C94.5809 5.06058 91.3548 5.74576 88.1288 6.58796C84.8599 7.37306 81.7623 8.48647 78.4649 9.59989C75.0819 10.7276 71.4133 11.4128 67.7305 10.8989C65.9176 10.5991 64.0905 9.95675 62.6487 8.81479C61.1785 7.6871 60.1792 6.14545 59.5654 4.53242C60.5789 5.9456 61.8351 7.10184 63.2768 7.81557C64.7185 8.5293 66.303 8.82906 67.8875 8.81479C71.085 8.81479 74.2539 7.78702 77.2516 6.50231C80.3063 5.04631 83.6608 3.7616 87.0011 2.70529C90.3699 1.69179 93.8814 0.920968 97.3929 0.549831C104.402 -0.192445 111.568 -0.0211512 118.434 1.60615C121.874 2.33415 125.228 3.44756 128.44 4.81792C131.666 6.21682 134.778 7.84412 137.49 10.0281Z" fill="#292F36" />
               </svg>
             </a>
-            <a href="/">
+            <a href="/" data-aos="fade-up" data-aos-delay="600">
               <svg xmlns="http://www.w3.org/2000/svg" width="118" height="48" viewBox="0 0 118 48" fill="none">
                 <path d="M0.683594 29.7841V0.57843H17.8844V29.7699H0.683594V29.7841ZM15.8004 22.9894L16.2429 19.7634L14.6441 19.6064L14.1588 22.0902C13.1595 22.5898 11.9319 22.8324 10.4617 22.8324C8.46322 22.8324 6.87874 22.2044 5.7225 20.9339C4.55199 19.6635 3.98101 17.9934 3.98101 15.9093C3.98101 13.8823 4.55199 12.2122 5.67968 10.8989C6.80737 9.58566 8.29196 8.92903 10.1334 8.92903C11.0755 8.92903 11.8748 9.04323 12.5172 9.25735C13.1596 9.47147 13.7448 9.75696 14.3015 10.1281L14.7726 12.5833L16.3999 12.4263L15.9288 9.20025C15.2437 8.615 14.43 8.14394 13.4879 7.7728C12.5457 7.41593 11.3752 7.23036 9.99062 7.23036C8.34905 7.23036 6.93587 7.63005 5.75108 8.4437C4.56629 9.25735 3.63845 10.3279 2.98182 11.6555C2.32519 12.9973 1.99687 14.439 1.99687 15.9807C1.99687 18.4216 2.75342 20.4629 4.26652 22.0902C5.77962 23.7175 7.74949 24.5311 10.1904 24.5311C12.5886 24.5311 14.4586 24.0172 15.8004 22.9894Z" fill="#292F36" />
                 <path d="M23.7227 29.7841V0.57843H31.1169V29.7699H23.7227V29.7841ZM24.5077 24.2742H30.346V22.8039H28.3333V6.50236H24.4792V7.97264H26.5205V22.8039H24.5077V24.2742Z" fill="#292F36" />
@@ -283,11 +289,11 @@ class HomePage extends React.Component {
         </section>
         <section className="projects">
           <div className="text-center">
-            <h1>Follow Our Projects</h1>
-            <p>It is a long established fact that a reader will be distracted by the of readable content of page  lookings at its layouts  points.</p>
+            <h1 data-aos="fade-up">Follow Our Projects</h1>
+            <p data-aos="fade-up" data-aos-delay="300">It is a long established fact that a reader will be distracted by the of readable content of page  lookings at its layouts  points.</p>
           </div>
           <div className="container">
-            <div className="card">
+            <div className="card" data-aos="fade-up">
               <img src={ProjectCard1} alt="Project" />
               <a href="/" className="card-body">
                 <div>
@@ -300,7 +306,7 @@ class HomePage extends React.Component {
                 </svg>
               </a>
             </div>
-            <div className="card">
+            <div className="card" data-aos="fade-up" data-aos-delay="300">
               <img src={ProjectCard2} alt="Project" />
               <a href="/" className="card-body">
                 <div>
@@ -313,7 +319,7 @@ class HomePage extends React.Component {
                 </svg>
               </a>
             </div>
-            <div className="card">
+            <div className="card" data-aos="fade-up" data-aos-delay="400">
               <img src={ProjectCard3} alt="Project" />
               <a href="/" className="card-body">
                 <div>
@@ -326,7 +332,7 @@ class HomePage extends React.Component {
                 </svg>
               </a>
             </div>
-            <div className="card">
+            <div className="card" data-aos="fade-up" data-aos-delay="500">
               <img src={ProjectCard4} alt="Project" />
               <a href="/" className="card-body">
                 <div>
@@ -343,19 +349,19 @@ class HomePage extends React.Component {
         </section>
         <section className="number">
           <div className="container">
-            <div className="number-item">
+            <div className="number-item" data-aos="fade-up">
               <h1>12</h1>
               <p>Years Of Experiance</p>
             </div>
-            <div className="number-item">
+            <div className="number-item" data-aos="fade-up" data-aos-delay="300">
               <h1>85</h1>
               <p>Success Project</p>
             </div>
-            <div className="number-item">
+            <div className="number-item" data-aos="fade-up" data-aos-delay="400">
               <h1>15</h1>
               <p>Active Project</p>
             </div>
-            <div className="number-item">
+            <div className="number-item" data-aos="fade-up" data-aos-delay="500">
               <h1>95</h1>
               <p>Happy Customers</p>
             </div>
@@ -363,11 +369,11 @@ class HomePage extends React.Component {
         </section>
         <section className="news">
           <div className="text-center">
-            <h1>Articles & News</h1>
-            <p>It is a long established fact that a reader will be distracted by the of readable content of a page when lookings at its layouts the points of using.</p>
+            <h1 data-aos="fade-up" data-aos-delay="300">Articles & News</h1>
+            <p data-aos="fade-up" data-aos-delay="300">It is a long established fact that a reader will be distracted by the of readable content of a page when lookings at its layouts the points of using.</p>
           </div>
           <div className="container">
-            <div className="card">
+            <div className="card" data-aos="fade-up">
               <div className="card-bg">
                 <p>Kitchan Design</p>
               </div>
@@ -382,7 +388,7 @@ class HomePage extends React.Component {
                 </div>
               </div>
             </div>
-            <div className="card">
+            <div className="card" data-aos="fade-up" data-aos-delay="300">
               <div className="card-bg">
                 <p>Living Design</p>
               </div>
@@ -397,7 +403,7 @@ class HomePage extends React.Component {
                 </div>
               </div>
             </div>
-            <div className="card">
+            <div className="card" data-aos="fade-up" data-aos-delay="300">
               <div className="card-bg">
                 <p>Interior Design</p>
               </div>
@@ -417,9 +423,9 @@ class HomePage extends React.Component {
         <section className="join">
           <div className="container">
             <div className="text-center">
-              <h1>Wanna join the interno?</h1>
-              <p>It is a long established fact  will be distracted.</p>
-              <a href="/contact">
+              <h1 data-aos="fade-up">Wanna join the interno?</h1>
+              <p data-aos="fade-up" data-aos-delay="300">It is a long established fact  will be distracted.</p>
+              <a href="/contact" data-aos="fade-up" data-aos-delay="300">
                 <div>
                   <span>Contact With Us</span>
                   <span>
@@ -504,7 +510,6 @@ class HomePage extends React.Component {
         </footer>
       </>
     )
-  }
 };
 const app = ReactDOMClient.createRoot(document.querySelector("#root"));
 app.render(<HomePage />);
