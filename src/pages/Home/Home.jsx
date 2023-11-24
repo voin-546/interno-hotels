@@ -9,6 +9,7 @@ import ProjectCard3 from "../../../src/img/project-cards/card 3.png";
 import ProjectCard4 from "../../../src/img/project-cards/card 4.png";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import "./HomePage.scss";
 const Container = (props) => {
     return (<div className="container">{props.children}</div>)
 }
@@ -112,7 +113,7 @@ function HomePage() {
                             </div>
                         </a>
                     </div>
-                    <img src={AboutImage} alt="Kitchen" data-aos="fade-left" />
+                    <img src={AboutImage} alt="Kitchen" data-aos="fade-down" />
                 </Container>
             </section>
             <section className="clients">
