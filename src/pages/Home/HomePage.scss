@@ -67,7 +67,7 @@ section {
         margin-block-start: 0;
         width: 100%;
         height: 100vh;
-        background: fixed url("../../img/hero.png") no-repeat center center / cover;
+        background: fixed url("../Home/img/hero.png") no-repeat center center / cover;
         @media (min-width: 1440px) {
             height: 700px;
         }
@@ -428,18 +428,18 @@ section {
                 }
                 &:nth-child(1) {
                     .card-bg {
-                        background: url("../../../src/img/news-cards/news\ 1.png") no-repeat center center / cover;
+                        background: url("./img/news-cards/news\ 1.png") no-repeat center center / cover;
                     }
                 }
                 &:nth-child(2) {
                     background: #F4F0EC;
                     .card-bg {
-                        background: url("../../../src/img/news-cards/news\ 2.png") no-repeat center center / cover;
+                        background: url("./img/news-cards/news\ 2.png") no-repeat center center / cover;
                     }
                 }
                 &:nth-child(3) {
                     .card-bg {
-                        background: url("../../../src/img/news-cards/news\ 3.png") no-repeat center center / cover;
+                        background: url("./img/news-cards/news\ 3.png") no-repeat center center / cover;
                     }
                 }
                 h3 {

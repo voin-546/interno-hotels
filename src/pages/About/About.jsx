@@ -1,15 +1,20 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import "../../css/Header.scss";
+import "../../ComponentStyles/Header.scss";
+import "./AboutPage.scss";
 const AboutPage = () => {
   return (
     <>
-    <Helmet>
-  <meta name="description" content="About" />
-  <title>About Interno</title>
-  {/* Другие метатеги */}
-</Helmet>
-    <div>About Page</div>
+      <>
+        <Helmet>
+          <title>About Interno</title>
+        </Helmet>
+      </>
+      <>
+        <section className="hero">
+          
+        </section>
+      </>
     </>
   )
 }

@@ -1,7 +1,7 @@
 import { Routes, Route, NavLink } from "react-router-dom";
 import AboutPage from "./pages/About/About";
 import HomePage from "./pages/Home/Home";
-import "./css/Header.scss";
+import "./ComponentStyles/Header.scss";
 function showMenu() {
     let header = document.querySelector("header");
     let burgerMenu = document.querySelector(".burger");

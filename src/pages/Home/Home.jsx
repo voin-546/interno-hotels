@@ -1,15 +1,16 @@
 import React, { useEffect }  from "react";
-import AboutImage from "../../../src/img/about.jpg";
-import Client1 from "../../../src/img/clients/client 1.png";
-import Client2 from "../../../src/img/clients/client 2.png";
-import Client3 from "../../../src/img/clients/client 3.png";
-import ProjectCard1 from "../../../src/img/project-cards/card 1.png";
-import ProjectCard2 from "../../../src/img/project-cards/card 2.png";
-import ProjectCard3 from "../../../src/img/project-cards/card 3.png";
-import ProjectCard4 from "../../../src/img/project-cards/card 4.png";
+import AboutImage from "./img/about.jpg";
+import Client1 from "./img/clients/client 1.png";
+import Client2 from "./img/clients/client 2.png";
+import Client3 from "./img/clients/client 3.png";
+import ProjectCard1 from "./img/project-cards/card 1.png";
+import ProjectCard2 from "./img/project-cards/card 2.png";
+import ProjectCard3 from "./img/project-cards/card 3.png";
+import ProjectCard4 from "./img/project-cards/card 4.png";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import "./HomePage.scss";
+import { Helmet } from "react-helmet";
 const Container = (props) => {
     return (<div className="container">{props.children}</div>)
 }
@@ -21,6 +22,11 @@ function HomePage() {
     }, []);
     return (
         <>
+        <>
+            <Helmet>
+                <title>Interno</title>
+            </Helmet>
+        </>
             <section className="hero">
                 <Container>
                     <div className="text">
