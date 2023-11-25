@@ -13,24 +13,24 @@ a div svg { transform: translate(5px, 3px); }
     --primary-dark: #292F36;
     --secondary-dark: #4D5053;
 }
-// @media (prefers-color-scheme: dark) {
-//     :root { --primary-dark: #fff; --secondary-dark: #c0c3c5;}
-//     body {
-//       background-color: #292F36;
-//       header { background-color: #292F36 !important; nav { background-color: #292F36; } .logo { svg path { fill: #CDA274; } } }  
-//       section.clients, section.number { background-color: #CDA274; .card { background-color: #292F36 !important; } }
-//       section.brands a { svg path { fill: #fff;} &:nth-child(2) svg path:nth-child(1) { fill: #292F36 !important;} &:nth-child(3) { svg path:nth-child(1) { fill: #4D5053 !important;} } }
-//       section.projects { svg { circle { fill: #4D5053; } path { fill: none; } } }
-//       section.number {h1 { color: #292F36 !important; } p { color: #555 !important; } }
-//       section.news .card { .card-bg { p { background-color: #292F36 !important; } } svg { circle { fill: #4D5053; } path { fill: none; } } &:nth-child(2) { background-color: #4D5053 !important; svg circle { fill: #555; } } }
-//       section.join { .container { background-color: #1F2022 !important; } svg path { fill: none;}}
-//       footer {a.logo svg path { fill: #CDA274 !important; } svg rect, svg path { fill: #fff !important; } }
-//     }
-// }
-// @media (prefers-color-scheme: light) {
-//     section a svg path { fill: #292F36; }
-//     section a.call { background: transparent; }
-// }
+@media (prefers-color-scheme: dark) {
+    :root { --primary-dark: #fff; --secondary-dark: #c0c3c5;}
+    body {
+      background-color: #292F36;
+      header { background-color: #292F36 !important; nav { background-color: #292F36; } .logo { svg path { fill: #CDA274; } } }  
+      section.clients, section.number { background-color: #CDA274; .card { background-color: #292F36 !important; } }
+      section.brands a { svg path { fill: #fff;} &:nth-child(2) svg path:nth-child(1) { fill: #292F36 !important;} &:nth-child(3) { svg path:nth-child(1) { fill: #4D5053 !important;} } }
+      section.projects { svg { circle { fill: #4D5053; } path { fill: none; } } }
+      section.number {h1 { color: #292F36 !important; } p { color: #555 !important; } }
+      section.news .card { .card-bg { p { background-color: #292F36 !important; } } svg { circle { fill: #4D5053; } path { fill: none; } } &:nth-child(2) { background-color: #4D5053 !important; svg circle { fill: #555; } } }
+      section.join { .container { background-color: #1F2022 !important; } svg path { fill: none;}}
+      footer {a.logo svg path { fill: #CDA274 !important; } svg rect, svg path { fill: #fff !important; } }
+    }
+}
+@media (prefers-color-scheme: light) {
+    section a svg path { fill: #292F36; }
+    section a.call { background: transparent; }
+}
 .container {
     width: min(100%, 1100px);
     margin-inline: auto;
