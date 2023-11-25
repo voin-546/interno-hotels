@@ -2,6 +2,9 @@ import { Routes, Route, NavLink } from "react-router-dom";
 import AboutPage from "./pages/About/About";
 import HomePage from "./pages/Home/Home";
 import "./ComponentStyles/Header.scss";
+import { useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 function showMenu() {
     let header = document.querySelector("header");
     let burgerMenu = document.querySelector(".burger");
@@ -9,6 +12,11 @@ function showMenu() {
     header.classList.toggle("show");
 }
 function Router() {
+    useEffect(() => {
+        Aos.init({
+            duration: 1200,
+        })
+    })
     return (
         <>
             <header>

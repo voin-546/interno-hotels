@@ -13,20 +13,20 @@ a div svg { transform: translate(5px, 3px); }
     --primary-dark: #292F36;
     --secondary-dark: #4D5053;
 }
-// @media (prefers-color-scheme: dark) {
-//     :root { --primary-dark: #fff; --secondary-dark: #c0c3c5;}
-//     body {
-//       background-color: #292F36;
-//       header { background-color: #292F36 !important; nav { background-color: #292F36; } .logo { svg path { fill: #CDA274; } } }  
-//       section.clients, section.number { background-color: #CDA274; .card { background-color: #292F36 !important; } }
-//       section.brands a { svg path { fill: #fff;} &:nth-child(2) svg path:nth-child(1) { fill: #292F36 !important;} &:nth-child(3) { svg path:nth-child(1) { fill: #4D5053 !important;} } }
-//       section.projects { svg { circle { fill: #4D5053; } path { fill: none; } } }
-//       section.number {h1 { color: #292F36 !important; } p { color: #555 !important; } }
-//       section.news .card { .card-bg { p { background-color: #292F36 !important; } } svg { circle { fill: #4D5053; } path { fill: none; } } &:nth-child(2) { background-color: #4D5053 !important; svg circle { fill: #555; } } }
-//       section.join { .container { background-color: #1F2022 !important; } svg path { fill: none;}}
-//       footer {a.logo svg path { fill: #CDA274 !important; } svg rect, svg path { fill: #fff !important; } }
-//     }
-// }
+@media (prefers-color-scheme: dark) {
+    :root { --primary-dark: #fff; --secondary-dark: #c0c3c5;}
+    body {
+      background-color: #292F36;
+      header { background-color: #292F36 !important; nav { background-color: #292F36; } .logo { svg path { fill: #CDA274; } } }  
+      section.clients, section.number { background-color: #CDA274; .card { background-color: #292F36 !important; } }
+      section.brands a { svg path { fill: #fff;} &:nth-child(2) svg path:nth-child(1) { fill: #292F36 !important;} &:nth-child(3) { svg path:nth-child(1) { fill: #4D5053 !important;} } }
+      section.projects { svg { circle { fill: #4D5053; } path { fill: none; } } }
+      section.number {h1 { color: #292F36 !important; } p { color: #555 !important; } }
+      section.news .card { .card-bg { p { background-color: #292F36 !important; } } svg { circle { fill: #4D5053; } path { fill: none; } } &:nth-child(2) { background-color: #4D5053 !important; svg circle { fill: #555; } } }
+      section.join { .container { background-color: #1F2022 !important; } svg path { fill: none;}}
+      footer {a.logo svg path { fill: #CDA274 !important; } svg rect, svg path { fill: #fff !important; } }
+    }
+}
 @media (prefers-color-scheme: light) {
     section a svg path { fill: #292F36; }
     section a.call { background: transparent; }
@@ -67,7 +67,7 @@ section {
         margin-block-start: 0;
         width: 100%;
         height: 100vh;
-        background: fixed url("../Home/img/hero.png") no-repeat center center / cover;
+        background: fixed url("../pages/Home/img/hero.png") no-repeat center center / cover;
         @media (min-width: 1440px) {
             height: 700px;
         }
@@ -428,18 +428,18 @@ section {
                 }
                 &:nth-child(1) {
                     .card-bg {
-                        background: url("./img/news-cards/news\ 1.png") no-repeat center center / cover;
+                        background: url("../pages/Home/img/news-cards/news\ 1.png") no-repeat center center / cover;
                     }
                 }
                 &:nth-child(2) {
                     background: #F4F0EC;
                     .card-bg {
-                        background: url("./img/news-cards/news\ 2.png") no-repeat center center / cover;
+                        background: url("../pages/Home/img/news-cards/news\ 2.png") no-repeat center center / cover;
                     }
                 }
                 &:nth-child(3) {
                     .card-bg {
-                        background: url("./img/news-cards/news\ 3.png") no-repeat center center / cover;
+                        background: url("../pages/Home/img/news-cards/news\ 3.png") no-repeat center center / cover;
                     }
                 }
                 h3 {
@@ -506,81 +506,114 @@ section {
         }
     }
 }
-footer {
-    margin-block-start: 135px;
-    @media (max-width: 1110px) { padding-inline: 10px; }
-    @media (max-width: 1060px) { padding-inline: 0; }
-    .container {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        @media (max-width: 1060px) { gap: 50px; }
-        @media (max-width: 768px) { gap: 50px; justify-content: space-between; }
-        @media (max-width: 700px) { justify-content: center; flex-direction: column; text-align: center; }
-        .footer-col {
-            &:nth-child(1) {
-                width: min(100%, 393px);
-                @media (max-width: 1060px) { width: min(100%, 40%); }
-                @media (max-width: 725px) { width: min(100%, 45%); }
-                @media (max-width: 700px) { margin: auto; }
-            }
-            &:nth-child(2),
-            &:nth-child(3) {
-                width: min(100%, 125px);
-                @media (max-width: 1060px) { width: min(100%, 40%); }
-                @media (max-width: 725px) { width: min(100%, 45%); }
-                @media (max-width: 700px) { margin: auto; }
-            }
-            &:nth-child(4) {
-                width: min(100%, 258px);
-                @media (max-width: 1060px) { width: min(100%, 40%); }
-                @media (max-width: 725px) { width: min(100%, 45%); }
-                @media (max-width: 700px) { margin: auto; }
-            }
-            .logo {
+// About Page
+section {
+    &.about-hero {
+        margin: 0;
+        background: fixed url("../pages/About/img/about-hero.png") no-repeat center center / cover;
+        width: 100%;
+        height: 80vh;
+        position: relative;
+        @media (min-width: 1320px) { height: 400px; }
+        @media (min-width: 1440px) { height: 600px; }
+        .text {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: min(100%, 503px);
+            padding: 41px 152px;
+            text-align: center;
+            background-color: #fff;
+            border-radius: 37px 37px 0 0;
+            h1 {
                 color: var(--primary-dark);
-                font: 400 40px/125% "DM Serif Display";
-                display: flex;
-                align-items: center;
-                gap: 0 5px;
-                @media (max-width: 700px) { justify-content: center; }
+                font: 400 50px/125% "DM Serif Display";
             }
             p {
-                margin-block: 18px 30px;
-            }
-            p,
-            ul li a {
                 color: var(--secondary-dark);
                 font: 400 22px/150% "Jost";
                 letter-spacing: .22px;
             }
-            h4 {
-                color: var(--primary-dark);
-                font: 400 25px/125% "DM Serif Display";
+        }
+    }
+    &.about-words {
+        .container { 
+            width: min(100%, 857px);
+            border: 25px solid #F4F0EC;
+            border-radius: 50px;
+            padding: 67px 32px;
+            text-align: center;
+            color: var(--primary-dark);
+            @media (min-width: 1320px) { padding-inline: 42px; }
+            @media (min-width: 1440px) { padding-inline: 62px; }
+            h1 {
+                font: italic 65px "DM Serif Display";
+                letter-spacing: 1.7px;
             }
-            ul li a {
-                margin-top: 20px;
-                display: inline-block;
+            h2 {
+                font: italic 400 35px "DM Serif Display";
+                letter-spacing: .7px;
+                margin-block-end: 34px;
             }
-            .social-links {
-                display: flex;
-                align-items: center;
-                flex-wrap: wrap;
-                gap: 54px;
+            p {
+                color: var(--secondary-dark);
+                font: 400 25px/150% "Jost";
+                font-family: Jost;
+                letter-spacing: .25px;
             }
         }
     }
-    .copyright {
-        width: 100%;
-        height: 120px;
-        display: grid;
-        place-items: center;
-        p {
-            color: var(--secondary-dark);
-            font: 400 22px/150% "Jost";
-            letter-spacing: .22px;
-            text-align: center;
-            @media (max-width: 440px) { padding-inline: 10px; }
+    &.about-info {
+        .container {
+            display: flex;
+            margin-top: 50px;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-items: center;
+            &:nth-child(1) { margin-top: 200px; }
+            &:nth-child(2) { margin-top: 150px; }
+            img { width: min(100%, 550px); height: 350px; }
+            .text {
+                width: min(100%, 452px);
+                h1 {
+                    color: var(--primary-dark);
+                    font: 400 50px/125% "DM Serif Display";
+                    letter-spacing: 1px;
+                }
+                p {
+                    color: var(--secondary-dark);
+                    font: 400 22px/150% "Jost";
+                    letter-spacing: .22px;
+                    margin-block: 23px 41px;
+                }
+                a {
+                    padding: 26px 41px;
+                    border-radius: 18px;
+                    background: #292F36;
+                    box-shadow: 0px 10px 20px 0px rgba(192, 192, 192, .35);
+                    div { display: inline; }
+                    span {
+                        color: #fff;
+                        font: 600 18px/125% "Jost";
+                        letter-spacing: .36px;
+                        svg {
+                            transform: translate(7px, 3px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.about-clients {
+        .card {
+            .card-body {
+                svg {
+                    &:nth-of-type(1) path, &:nth-of-type(2) path { fill: none; }
+                    &:nth-of-type(3) path, &:nth-of-type(4) path { fill: #292F36; }
+                }
+            }
         }
     }
 }
+
