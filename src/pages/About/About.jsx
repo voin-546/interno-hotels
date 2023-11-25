@@ -73,17 +73,185 @@ const AboutPage = () => {
             <div className="text-center">
               <h1>What the People Think About Us</h1>
             </div>
-            <div className="card">
-              <img src={Client1} alt="Client" />
-              <div className="card-body">
-                <h3>Charlotte Levi</h3>
-                <p>Design, Australia</p>
-                <div className="links">
-                  <a href="tel:+1 (378) 400-1234">+1 (378) 400-1234</a>
-                  <a href="https://julie@gmail.com">julie@gmail.com</a>
+            <div className="cards">
+              <div className="card">
+                <img src={Client1} alt="Client" />
+                <div className="card-body">
+                  <h3>Charlotte Levi</h3>
+                  <p>Design, Australia</p>
+                  <div className="social-links">
+                    <a href="#!">
+                      <svg width={22} height={22} fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                      </svg>
+                    </a>
+                    <a href="#!">
+                      <svg width={22} height={22} fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5 0-.278-.028-.556-.08-.83A7.72 7.72 0 0 0 23 3Z" />
+                      </svg>
+                    </a>
+                    <a href="#!">
+                      <svg width={22} height={22} fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                        <path d="M2 9h4v12H2z" />
+                        <path d="M4 2a2 2 0 1 0 0 4 2 2 0 1 0 0-4z" />
+                      </svg>
+                    </a>
+                    <a href="#!">
+                      <svg width={22} height={22} fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <rect width={20} height={20} x={2} y={2} rx={5} ry={5} />
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                        <path d="M17.5 6.5h.01" />
+                      </svg>
+                    </a>
+                  </div>
+                  <div className="links">
+                    <a href="tel:+1 (378) 400-1234">+1 (378) 400-1234</a>
+                    <a href="https://julie@gmail.com">julie@gmail.com</a>
+                  </div>
+                </div>
+              </div>
+              <div className="card">
+                <img src={Client2} alt="Client" />
+                <div className="card-body">
+                  <h3>Natasha Julie</h3>
+                  <p>Design, Australia</p>
+                  <div className="social-links">
+                    <a href="#!">
+                      <svg width={22} height={22} fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                      </svg>
+                    </a>
+                    <a href="#!">
+                      <svg width={22} height={22} fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5 0-.278-.028-.556-.08-.83A7.72 7.72 0 0 0 23 3Z" />
+                      </svg>
+                    </a>
+                    <a href="#!">
+                      <svg width={22} height={22} fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                        <path d="M2 9h4v12H2z" />
+                        <path d="M4 2a2 2 0 1 0 0 4 2 2 0 1 0 0-4z" />
+                      </svg>
+                    </a>
+                    <a href="#!">
+                      <svg width={22} height={22} fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <rect width={20} height={20} x={2} y={2} rx={5} ry={5} />
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                        <path d="M17.5 6.5h.01" />
+                      </svg>
+                    </a>
+                  </div>
+                  <div className="links">
+                    <a href="tel:+1 (378) 400-1234">+1 (378) 400-1234</a>
+                    <a href="https://julie@gmail.com">julie@gmail.com</a>
+                  </div>
+                </div>
+              </div>
+              <div className="card">
+                <img src={Client3} alt="Client" />
+                <div className="card-body">
+                  <h3>John Smith</h3>
+                  <p>Design, Australia</p>
+                  <div className="social-links">
+                    <a href="#!">
+                      <svg width={22} height={22} fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                      </svg>
+                    </a>
+                    <a href="#!">
+                      <svg width={22} height={22} fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5 0-.278-.028-.556-.08-.83A7.72 7.72 0 0 0 23 3Z" />
+                      </svg>
+                    </a>
+                    <a href="#!">
+                      <svg width={22} height={22} fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                        <path d="M2 9h4v12H2z" />
+                        <path d="M4 2a2 2 0 1 0 0 4 2 2 0 1 0 0-4z" />
+                      </svg>
+                    </a>
+                    <a href="#!">
+                      <svg width={22} height={22} fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <rect width={20} height={20} x={2} y={2} rx={5} ry={5} />
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                        <path d="M17.5 6.5h.01" />
+                      </svg>
+                    </a>
+                  </div>
+                  <div className="links">
+                    <a href="tel:+1 (378) 400-1234">+1 (378) 400-1234</a>
+                    <a href="https://julie@gmail.com">julie@gmail.com</a>
+                  </div>
+                </div>
+              </div>
+              <div className="card">
+                <img src={Client4} alt="Client" />
+                <div className="card-body">
+                  <h3>Nora Owen</h3>
+                  <p>Design, Australia</p>
+                  <div className="social-links">
+                    <a href="#!">
+                      <svg width={22} height={22} fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                      </svg>
+                    </a>
+                    <a href="#!">
+                      <svg width={22} height={22} fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5 0-.278-.028-.556-.08-.83A7.72 7.72 0 0 0 23 3Z" />
+                      </svg>
+                    </a>
+                    <a href="#!">
+                      <svg width={22} height={22} fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                        <path d="M2 9h4v12H2z" />
+                        <path d="M4 2a2 2 0 1 0 0 4 2 2 0 1 0 0-4z" />
+                      </svg>
+                    </a>
+                    <a href="#!">
+                      <svg width={22} height={22} fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <rect width={20} height={20} x={2} y={2} rx={5} ry={5} />
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                        <path d="M17.5 6.5h.01" />
+                      </svg>
+                    </a>
+                  </div>
+                  <div className="links">
+                    <a href="tel:+1 (378) 400-1234">+1 (378) 400-1234</a>
+                    <a href="https://julie@gmail.com">julie@gmail.com</a>
+                  </div>
                 </div>
               </div>
             </div>
+          </div>
+        </section>
+        <section className="login-form">
+          <div className="text-center">
+            <h1>Creative project? Let's have a productive talk.</h1>
+          </div>
+          <div className="container">
+            <form action="">
+              <div className="input-box">
+              <label htmlFor="username">Name</label>
+                <input type="name" id="username" />
+              </div>
+              <div className="input-box">
+                <input type="email" id="email" />
+                <label htmlFor="email">Email</label>
+              </div>
+              <div className="textarea-box">
+                <textarea id="text"></textarea>
+                <label htmlFor="text">Hello, I'm interested in ...</label>
+              </div>
+              <button>
+                <span>Send Now</span>
+                <span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="19" height="17" viewBox="0 0 19 17" fill="none">
+                    <path d="M1.92969 8.43536L15.6529 8.29851M10.5479 1.91132L17.0708 8.4343L10.4165 15.0887" stroke="#CDA274" stroke-width="2" stroke-linecap="square" stroke-linejoin="round" />
+                  </svg>
+                </span>
+              </button>
+            </form>
           </div>
         </section>
         <Footer />

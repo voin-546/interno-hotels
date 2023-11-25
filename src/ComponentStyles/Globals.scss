@@ -13,24 +13,24 @@ a div svg { transform: translate(5px, 3px); }
     --primary-dark: #292F36;
     --secondary-dark: #4D5053;
 }
-@media (prefers-color-scheme: dark) {
-    :root { --primary-dark: #fff; --secondary-dark: #c0c3c5;}
-    body {
-      background-color: #292F36;
-      header { background-color: #292F36 !important; nav { background-color: #292F36; } .logo { svg path { fill: #CDA274; } } }  
-      section.clients, section.number { background-color: #CDA274; .card { background-color: #292F36 !important; } }
-      section.brands a { svg path { fill: #fff;} &:nth-child(2) svg path:nth-child(1) { fill: #292F36 !important;} &:nth-child(3) { svg path:nth-child(1) { fill: #4D5053 !important;} } }
-      section.projects { svg { circle { fill: #4D5053; } path { fill: none; } } }
-      section.number {h1 { color: #292F36 !important; } p { color: #555 !important; } }
-      section.news .card { .card-bg { p { background-color: #292F36 !important; } } svg { circle { fill: #4D5053; } path { fill: none; } } &:nth-child(2) { background-color: #4D5053 !important; svg circle { fill: #555; } } }
-      section.join { .container { background-color: #1F2022 !important; } svg path { fill: none;}}
-      footer {a.logo svg path { fill: #CDA274 !important; } svg rect, svg path { fill: #fff !important; } }
-    }
-}
-@media (prefers-color-scheme: light) {
-    section a svg path { fill: #292F36; }
-    section a.call { background: transparent; }
-}
+// @media (prefers-color-scheme: dark) {
+//     :root { --primary-dark: #fff; --secondary-dark: #c0c3c5;}
+//     body {
+//       background-color: #292F36;
+//       header { background-color: #292F36 !important; nav { background-color: #292F36; } .logo { svg path { fill: #CDA274; } } }  
+//       section.clients, section.number { background-color: #CDA274; .card { background-color: #292F36 !important; } }
+//       section.brands a { svg path { fill: #fff;} &:nth-child(2) svg path:nth-child(1) { fill: #292F36 !important;} &:nth-child(3) { svg path:nth-child(1) { fill: #4D5053 !important;} } }
+//       section.projects { svg { circle { fill: #4D5053; } path { fill: none; } } }
+//       section.number {h1 { color: #292F36 !important; } p { color: #555 !important; } }
+//       section.news .card { .card-bg { p { background-color: #292F36 !important; } } svg { circle { fill: #4D5053; } path { fill: none; } } &:nth-child(2) { background-color: #4D5053 !important; svg circle { fill: #555; } } }
+//       section.join { .container { background-color: #1F2022 !important; } svg path { fill: none;}}
+//       footer {a.logo svg path { fill: #CDA274 !important; } svg rect, svg path { fill: #fff !important; } }
+//     }
+// }
+// @media (prefers-color-scheme: light) {
+//     section a svg path { fill: #292F36; }
+//     section a.call { background: transparent; }
+// }
 .container {
     width: min(100%, 1100px);
     margin-inline: auto;
@@ -606,11 +606,90 @@ section {
         }
     }
     &.about-clients {
-        .card {
-            .card-body {
-                svg {
-                    &:nth-of-type(1) path, &:nth-of-type(2) path { fill: none; }
-                    &:nth-of-type(3) path, &:nth-of-type(4) path { fill: #292F36; }
+        width: 100%;
+        background-color: #F4F0EC;
+        padding-block: 185px;
+        .text-center { width: min(100%, 547px); }
+        .cards {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-block: 40px 0;
+            .card {
+                width: min(100%, 260px);
+                position: relative;
+                overflow: hidden;
+                height: 420px;
+                border-radius: 30px;
+                &:hover {
+                    .card-body { top: 0; }
+                    img { transform: scale(1.3); }
+                }
+                img { transition: transform .5s; height: 100%; border-radius: 35px; }
+                img, .card-body { width: 100%; }
+                .card-body {
+                    background-color: #fff;
+                    border-radius: 30px;
+                    text-align: center;
+                    padding: 70px 27px;
+                    position: absolute;
+                    top: 100%;
+                    transition: top .5s;
+                    .social-links {
+                        margin-block: 66px;
+                        display: flex;
+                        gap: 20px;
+                        justify-content: center;
+                    }
+                    .links { display: flex; flex-direction: column; }
+                    h3 {
+                        color: var(--primary-dark);
+                        font: 400 25px/150% "DM Serif Display";
+                        letter-spacing: .25px;
+                    }
+                    p, a {
+                        color: var(--secondary-dark);
+                        font: 400 18px/150% "Jost";
+                        letter-spacing: .18px;
+                    }
+                }
+            }
+        }
+    }
+    &.login-form {
+        .text-center { width: min(100%, 664px); }
+        form {
+            width: min(100%, 796px);
+            margin: auto;
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+            .input-box {
+                width: min(100%, 378px);
+                position: relative;
+                label {
+                    color: var(--secondary-dark);
+                    font: 400 22px/150% "Jost";
+                    letter-spacing: .22px;
+                    position: absolute;
+                    top: 0;
+                    transition: top .5s, font-size .5s;
+                    left: 0;
+                    pointer-events: none;
+                    padding-block: 10px;
+                }
+                input {
+                    width: 100%;
+                    padding-block: 10px;
+                    border: none;
+                    outline: none;
+                    border-bottom: 1.5px solid var(--primary-dark);
+                    &:focus ~ label, &:valid ~ label {
+                        top: -20px;
+                        font-size: 17px;
+                        left: 0;
+                        padding-block: 10px;
+                    }
                 }
             }
         }
