@@ -236,18 +236,18 @@ const AboutPage = () => {
                 <input type="name" id="username" />
               </div>
               <div className="input-box">
-                <input type="email" id="email" />
                 <label htmlFor="email">Email</label>
+                <input type="email" id="email" />
               </div>
               <div className="textarea-box">
-                <textarea id="text"></textarea>
                 <label htmlFor="text">Hello, I'm interested in ...</label>
+                <textarea id="text"></textarea>
               </div>
               <button>
                 <span>Send Now</span>
                 <span>
                   <svg xmlns="http://www.w3.org/2000/svg" width="19" height="17" viewBox="0 0 19 17" fill="none">
-                    <path d="M1.92969 8.43536L15.6529 8.29851M10.5479 1.91132L17.0708 8.4343L10.4165 15.0887" stroke="#CDA274" stroke-width="2" stroke-linecap="square" stroke-linejoin="round" />
+                    <path d="M1.92969 8.43536L15.6529 8.29851M10.5479 1.91132L17.0708 8.4343L10.4165 15.0887" stroke="#CDA274" strokeWidth="2" strokeLinecap="square" strokeLinejoin="round" />
                   </svg>
                 </span>
               </button>

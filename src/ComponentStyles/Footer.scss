@@ -14,7 +14,7 @@ footer {
                 width: min(100%, 393px);
                 @media (max-width: 1060px) { width: min(100%, 40%); }
                 @media (max-width: 725px) { width: min(100%, 45%); }
-                @media (max-width: 700px) { margin: auto; }
+                @media (max-width: 700px) { margin: auto; width: 100%; }
             }
             &:nth-child(2),
             &:nth-child(3) {
@@ -27,7 +27,7 @@ footer {
                 width: min(100%, 258px);
                 @media (max-width: 1060px) { width: min(100%, 40%); }
                 @media (max-width: 725px) { width: min(100%, 45%); }
-                @media (max-width: 700px) { margin: auto; }
+                @media (max-width: 700px) { margin: auto; width: 100%; }
             }
             .logo {
                 color: var(--primary-dark);
@@ -59,6 +59,7 @@ footer {
                 align-items: center;
                 flex-wrap: wrap;
                 gap: 54px;
+                @media (max-width: 700px) { justify-content: center; }
             }
         }
     }

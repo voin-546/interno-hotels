@@ -32,7 +32,7 @@ function HomePage() {
                             <div>Get Started
                                 <span>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17" fill="none">
-                                        <path d="M1 8.43542L14.7232 8.29857M9.61818 1.91138L16.1412 8.43436L9.48677 15.0887" stroke="#CDA274" strokeWidth="2" strokeLinecap="square" strokeLineJoin="round" />
+                                        <path d="M1 8.43542L14.7232 8.29857M9.61818 1.91138L16.1412 8.43436L9.48677 15.0887" stroke="#CDA274" strokeWidth="2" strokeLinecap="square" strokeLinejoin="round" />
                                     </svg>
                                 </span>
                             </div>
@@ -51,7 +51,7 @@ function HomePage() {
                                 <span>Read More</span>
                                 <span>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="19" height="17" viewBox="0 0 19 17" fill="none">
-                                        <path d="M1.92969 8.43542L15.6529 8.29857M10.5479 1.91138L17.0708 8.43436L10.4165 15.0887" stroke="#CDA274" strokeWidth="2" strokeLinecap="square" strokeLineJoin="round" />
+                                        <path d="M1.92969 8.43542L15.6529 8.29857M10.5479 1.91138L17.0708 8.43436L10.4165 15.0887" stroke="#CDA274" strokeWidth="2" strokeLinecap="square" strokeLinejoin="round" />
                                     </svg>
                                 </span>
                             </div>
@@ -66,7 +66,7 @@ function HomePage() {
                                 <span>Read More</span>
                                 <span>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="19" height="17" viewBox="0 0 19 17" fill="none">
-                                        <path d="M1.92969 8.43542L15.6529 8.29857M10.5479 1.91138L17.0708 8.43436L10.4165 15.0887" stroke="#CDA274" strokeWidth="2" strokeLinecap="square" strokeLineJoin="round" />
+                                        <path d="M1.92969 8.43542L15.6529 8.29857M10.5479 1.91138L17.0708 8.43436L10.4165 15.0887" stroke="#CDA274" strokeWidth="2" strokeLinecap="square" strokeLinejoin="round" />
                                     </svg>
                                 </span>
                             </div>
@@ -81,7 +81,7 @@ function HomePage() {
                                 <span>Read More</span>
                                 <span>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="19" height="17" viewBox="0 0 19 17" fill="none">
-                                        <path d="M1.92969 8.43542L15.6529 8.29857M10.5479 1.91138L17.0708 8.43436L10.4165 15.0887" stroke="#CDA274" strokeWidth="2" strokeLinecap="square" strokeLineJoin="round" />
+                                        <path d="M1.92969 8.43542L15.6529 8.29857M10.5479 1.91138L17.0708 8.43436L10.4165 15.0887" stroke="#CDA274" strokeWidth="2" strokeLinecap="square" strokeLinejoin="round" />
                                     </svg>
                                 </span>
                             </div>
@@ -109,7 +109,7 @@ function HomePage() {
                                 <span>Get Free Estimate</span>
                                 <span>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17" fill="none">
-                                        <path d="M1 8.4353L14.7232 8.29845M9.61818 1.91125L16.1412 8.43424L9.48677 15.0886" stroke="#CDA274" strokeWidth="2" strokeLinecap="square" strokeLineJoin="round" />
+                                        <path d="M1 8.4353L14.7232 8.29845M9.61818 1.91125L16.1412 8.43424L9.48677 15.0886" stroke="#CDA274" strokeWidth="2" strokeLinecap="square" strokeLinejoin="round" />
                                     </svg>
                                 </span>
                             </div>
@@ -270,7 +270,7 @@ function HomePage() {
                             </div>
                             <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70" fill="none">
                                 <circle cx="35" cy="35" r="35" fill="#F4F0EC" />
-                                <path d="M32 44L40 35L32 26" stroke="#292F36" strokeWidth="2" strokeLinecap="round" strokeLineJoin="round" />
+                                <path d="M32 44L40 35L32 26" stroke="#292F36" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                             </svg>
                         </a>
                     </div>
@@ -283,7 +283,7 @@ function HomePage() {
                             </div>
                             <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70" fill="none">
                                 <circle cx="35" cy="35" r="35" fill="#F4F0EC" />
-                                <path d="M32 44L40 35L32 26" stroke="#292F36" strokeWidth="2" strokeLinecap="round" strokeLineJoin="round" />
+                                <path d="M32 44L40 35L32 26" stroke="#292F36" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                             </svg>
                         </a>
                     </div>
@@ -296,7 +296,7 @@ function HomePage() {
                             </div>
                             <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70" fill="none">
                                 <circle cx="35" cy="35" r="35" fill="#F4F0EC" />
-                                <path d="M32 44L40 35L32 26" stroke="#292F36" strokeWidth="2" strokeLinecap="round" strokeLineJoin="round" />
+                                <path d="M32 44L40 35L32 26" stroke="#292F36" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                             </svg>
                         </a>
                     </div>
@@ -309,7 +309,7 @@ function HomePage() {
                             </div>
                             <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70" fill="none">
                                 <circle cx="35" cy="35" r="35" fill="#F4F0EC" />
-                                <path d="M32 44L40 35L32 26" stroke="#292F36" strokeWidth="2" strokeLinecap="round" strokeLineJoin="round" />
+                                <path d="M32 44L40 35L32 26" stroke="#292F36" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                             </svg>
                         </a>
                     </div>
@@ -351,7 +351,7 @@ function HomePage() {
                                 <p>26 December, 2022 </p>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="52" height="53" viewBox="0 0 52 53" fill="none">
                                     <circle cx="26" cy="26.2671" r="26" fill="#F4F0EC" />
-                                    <path d="M23.771 32.9529L29.7139 26.2672L23.771 19.5815" stroke="#292F36" strokeWidth="2" strokeLinecap="round" strokeLineJoin="round" />
+                                    <path d="M23.771 32.9529L29.7139 26.2672L23.771 19.5815" stroke="#292F36" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                 </svg>
                             </div>
                         </div>
@@ -366,7 +366,7 @@ function HomePage() {
                                 <p>22 December, 2022</p>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="52" height="53" viewBox="0 0 52 53" fill="none">
                                     <circle cx="26" cy="26.2671" r="26" fill="#fff" />
-                                    <path d="M23.771 32.9529L29.7139 26.2672L23.771 19.5815" stroke="#292F36" strokeWidth="2" strokeLinecap="round" strokeLineJoin="round" />
+                                    <path d="M23.771 32.9529L29.7139 26.2672L23.771 19.5815" stroke="#292F36" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                 </svg>
                             </div>
                         </div>
@@ -381,7 +381,7 @@ function HomePage() {
                                 <p>26 December,2022 </p>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="52" height="53" viewBox="0 0 52 53" fill="none">
                                     <circle cx="26" cy="26.2671" r="26" fill="#F4F0EC" />
-                                    <path d="M23.771 32.9529L29.7139 26.2672L23.771 19.5815" stroke="#292F36" strokeWidth="2" strokeLinecap="round" strokeLineJoin="round" />
+                                    <path d="M23.771 32.9529L29.7139 26.2672L23.771 19.5815" stroke="#292F36" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                 </svg>
                             </div>
                         </div>
@@ -398,7 +398,7 @@ function HomePage() {
                                 <span>Contact With Us</span>
                                 <span>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="19" height="17" viewBox="0 0 19 17" fill="none">
-                                        <path d="M1.92969 8.43542L15.6529 8.29857M10.5479 1.91138L17.0708 8.43436L10.4165 15.0887" stroke="#292F36" strokeWidth="2" strokeLinecap="square" strokeLineJoin="round" />
+                                        <path d="M1.92969 8.43542L15.6529 8.29857M10.5479 1.91138L17.0708 8.43436L10.4165 15.0887" stroke="#292F36" strokeWidth="2" strokeLinecap="square" strokeLinejoin="round" />
                                     </svg>
                                 </span>
                             </div>
