@@ -30,6 +30,43 @@ a div svg { transform: translate(5px, 3px); }
       footer {a.logo svg path { fill: #CDA274 !important; } svg rect, svg path { fill: #fff !important; } }
     }
 }
+.error {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-inline: 100px 0;
+    align-items: center;
+    @media (max-width: 1030px) { justify-content: center; text-align: center; gap: 30px; padding: 0; }
+    @media (max-width: 768px) { padding-inline: 20px; }
+    @media (max-width: 575px) { padding-inline: 10px; }
+    img { height: 100vh; @media (max-width: 1030px) { width: min(100%, 570px); height: auto; } }
+    .text {
+        width: min(100%, 570px);
+        h1 {
+            color: #CDA274;
+            font: 400 165px/125% "DM Serif Display";
+        }
+        h3 {
+            color: var(--primary-dark);
+            font: 400 35px/150% "DM Serif Display";
+            letter-spacing: .35px;
+        }
+        a {
+            border-radius: 18px;
+            box-shadow: 0px 10px 20px 0px rgba(192, 192, 192, .35);
+            display: inline-block;
+            margin-top: 20px;
+            background-color: #1F2022;
+            color: #fff;
+            font: 600 18px/125% "Jost";
+            letter-spacing: .36px;
+            padding: 26px 54px;
+            svg {
+                transform: translate(5px, 3px);
+            }
+        }
+    }
+}
 @media (prefers-color-scheme: light) {
     section a svg path { fill: #292F36; }
     section a.call { background: transparent; }
