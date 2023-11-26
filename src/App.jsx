@@ -39,11 +39,11 @@ function Router() {
                     <nav>
                         <ul>
                             <li><NavLink to="/">Home</NavLink></li>
-                            <li><NavLink to="/about/" element={<AboutPage/>}>About</NavLink></li>
-                            <li><NavLink to="/services/">Services</NavLink></li>
-                            <li><NavLink to="/project/">Project</NavLink></li>
-                            <li><NavLink to="/blog/">Blog</NavLink></li>
-                            <li><NavLink to="/contact/">Contact</NavLink></li>
+                            <li><NavLink to="/about" element={<AboutPage/>}>About</NavLink></li>
+                            <li><NavLink to="/services">Services</NavLink></li>
+                            <li><NavLink to="/project">Project</NavLink></li>
+                            <li><NavLink to="/blog">Blog</NavLink></li>
+                            <li><NavLink to="/contact">Contact</NavLink></li>
                         </ul>
                     </nav>
                 </div>

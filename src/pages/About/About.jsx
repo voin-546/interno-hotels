@@ -20,25 +20,25 @@ const AboutPage = () => {
       <>
         <section className="about-hero">
           <div className="text">
-            <h1>About Us</h1>
-            <p>Home / About Us</p>
+            <h1 data-aos="fade-up">About Us</h1>
+            <p data-aos="fade-up" data-aos-delay="300">Home / About Us</p>
           </div>
         </section>
         <section className="about-words">
           <div className="container">
-            <h1>“</h1>
-            <h2>I like an interior that defies labeling. I don't really want someone to walk into a room and know that I did it
+            <h1 data-aos="fade-up">“</h1>
+            <h2 data-aos="fade-up" data-aos-delay="300">I like an interior that defies labeling. I don't really want someone to walk into a room and know that I did it
             </h2>
-            <p>-BUNNY WILLIAMS</p>
+            <p data-aos="fade-up" data-aos-delay="400">-BUNNY WILLIAMS</p>
           </div>
         </section>
         <section className="about-info">
           <div className="container">
             <div className="text">
-              <h1>What We Do</h1>
-              <p>It is a long established fact that a reader will be distracted by the of readable content of a page
+              <h1 data-aos="fade-up">What We Do</h1>
+              <p data-aos="fade-up" data-aos-delay="300">It is a long established fact that a reader will be distracted by the of readable content of a page
                 when lookings at its layouts the points of using that it has a more-or-less normal.</p>
-              <a href="/concept/">
+              <a href="/concept/" data-aos="fade-up" data-aos-delay="400">
                 <div>
                   <span>Our Concept</span>
                   <span>
@@ -49,15 +49,15 @@ const AboutPage = () => {
                 </div>
               </a>
             </div>
-            <img src={AboutImage1} alt="Working place" />
+            <img src={AboutImage1} alt="Working place" data-aos="fade-down"/>
           </div>
           <div className="container">
-            <img src={AboutImage2} alt="Working Place" />
+            <img src={AboutImage2} alt="Working Place" data-aos="fade-down"/>
             <div className="text">
-              <h1>The End Result</h1>
-              <p>It is a long established fact that a reader will be distracted by the of readable content of a page
+              <h1 data-aos="fade-up">The End Result</h1>
+              <p data-aos="fade-up" data-aos-delay="300">It is a long established fact that a reader will be distracted by the of readable content of a page
                 when lookings at its layouts the points of using that it has a more-or-less normal.</p>
-              <a href="/portfolio/">
+              <a href="/portfolio/" data-aos-delay="400" data-aos="fade-up">
                 <span>Our Portfolio</span>
                 <span>
                   <svg xmlns="http://www.w3.org/2000/svg" width="18" height="16" viewBox="0 0 18 16" fill="none">
@@ -71,10 +71,10 @@ const AboutPage = () => {
         <section className="about-clients">
           <div className="container">
             <div className="text-center">
-              <h1>What the People Think About Us</h1>
+              <h1 data-aos="fade-up">What the People Think About Us</h1>
             </div>
             <div className="cards">
-              <div className="card">
+              <div className="card" data-aos="fade-up">
                 <img src={Client1} alt="Client" />
                 <div className="card-body">
                   <h3>Charlotte Levi</h3>
@@ -111,7 +111,7 @@ const AboutPage = () => {
                   </div>
                 </div>
               </div>
-              <div className="card">
+              <div className="card" data-aos="fade-up" data-aos-delay="300">
                 <img src={Client2} alt="Client" />
                 <div className="card-body">
                   <h3>Natasha Julie</h3>
@@ -148,7 +148,7 @@ const AboutPage = () => {
                   </div>
                 </div>
               </div>
-              <div className="card">
+              <div className="card" data-aos="fade-up" data-aos-delay="400">
                 <img src={Client3} alt="Client" />
                 <div className="card-body">
                   <h3>John Smith</h3>
@@ -185,7 +185,7 @@ const AboutPage = () => {
                   </div>
                 </div>
               </div>
-              <div className="card">
+              <div className="card" data-aos="fade-up" data-aos-delay="500">
                 <img src={Client4} alt="Client" />
                 <div className="card-body">
                   <h3>Nora Owen</h3>
@@ -227,7 +227,7 @@ const AboutPage = () => {
         </section>
         <section className="login-form">
           <div className="text-center">
-            <h1>Creative project? Let's have a productive talk.</h1>
+            <h1 data-aos="fade-up">Creative project? Let's have a productive talk.</h1>
           </div>
           <div className="container">
             <form action="">
