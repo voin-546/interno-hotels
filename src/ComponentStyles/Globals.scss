@@ -25,7 +25,7 @@ a div svg { transform: translate(5px, 3px); }
       section.news .card { .card-bg { p { background-color: #292F36 !important; } } svg { circle { fill: #4D5053; } path { fill: none; } } &:nth-child(2) { background-color: #4D5053 !important; svg circle { fill: #555; } } }
       section.join { .container { background-color: #1F2022 !important; } svg path { fill: none;}}
       section.about-clients { background-color: darken($color: #F4F0EC, $amount: 25%); .cards .card .card-body { background-color: #1F2022; } }
-      section.about-hero .text { background-color: #1F2022; }
+      section.about-hero .text, section.services-hero .text { background-color: #1F2022; }
       section.about-words .container { border-color: darken($color: #F4F0EC, $amount: 25%); }
       footer {a.logo svg path { fill: #CDA274 !important; } svg rect, svg path { fill: #fff !important; } }
     }
@@ -152,6 +152,8 @@ section {
         }
     }
     &.info-cards {
+        margin-top: 40px;
+        @media (max-width: 1094px) { margin-top: 128px; }
         .container {
             display: flex;
             justify-content: space-between;
@@ -161,6 +163,8 @@ section {
                 width: min(100%, 338px);
                 text-align: center;
                 padding-inline: 10px;
+                margin-top: 80px;
+                @media (max-width: 1094px) { margin: 0; }
                 h3 {
                     color: var(--primary-dark);
                     font: 400 25px/125% "DM Serif Display";
@@ -550,7 +554,7 @@ section {
 }
 // About Page
 section {
-    &.about-hero {
+    &.about-hero, &.services-hero {
         margin: 0;
         background: fixed url("../pages/About/img/about-hero.png") no-repeat center center / cover;
         width: 100%;
@@ -771,6 +775,55 @@ section {
                     font: 600 18px/125% "Jost";
                     letter-spacing: .36px;
                     svg { transform: translate(5px, 3px); }
+                }
+            }
+        }
+    }
+    &.services-hero {
+        background-image: url("../pages/Services/hero-image.png");
+    }
+    &.services-work {
+        .container {
+            background-color: #F4F0EC;
+            padding: 160px 66px;
+            border-radius: 70px;
+            @media (min-width: 1320px) { padding-inline: 76px; }
+            @media (max-width: 1140px) { padding-inline: 46px; }
+            @media (max-width: 1050px) { padding-inline: 26px; }
+            @media (prefers-color-scheme: dark) {
+                background-color: darken($color: #F4F0EC, $amount: 45%);
+            }
+            .text-center { margin-block-end: 30px; width: min(100%, 802px); }
+            .work-item {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                margin-block-start: 70px;
+                @media (max-width: 992px) { 
+                    flex-direction: column; 
+                    text-align: center; 
+                    gap: 30px; 
+                }
+                .text, img { @media (max-width: 992px) { margin-inline: auto; } }
+                img { width: min(100%, 453px); }
+                .text { width: min(100%, 456px); }
+                .text-header {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    h1 {
+                        color: #fff;
+                        font: 400 120px/125% "DM Serif Display";
+                    }
+                }
+                h3 {
+                    color: var(--primary-dark);
+                    font: 400 35px/125% "DM Serif Display";
+                }
+                p {
+                    color: var(--secondary-dark);
+                    font: 400 22px/150% "Jost";
+                    letter-spacing: .22px;
                 }
             }
         }

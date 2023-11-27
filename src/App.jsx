@@ -6,6 +6,7 @@ import { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import NotFound from "./pages/404/NotFound";
+import Services from "./pages/Services/Services";
 function showMenu() {
     let header = document.querySelector("header");
     let burgerMenu = document.querySelector(".burger");
@@ -51,9 +52,10 @@ function Router() {
             </header>
             <>
                 <Routes>
-                    <Route path="/" element={<HomePage />}></Route>
-                    <Route path="about" element={<AboutPage/>}></Route>
-                    <Route path="*" element={<NotFound/>}></Route>
+                    <Route exact path="/" element={<HomePage />}/>
+                    <Route path="about" element={<AboutPage/>}/>
+                    <Route path="services" element={<Services/>}/>
+                    <Route path="*" element={<NotFound/>}/>
                 </Routes>
             </>
         </>
