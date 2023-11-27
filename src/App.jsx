@@ -7,6 +7,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import NotFound from "./pages/404/NotFound";
 import Services from "./pages/Services/Services";
+import ProjectsPage from "./pages/Projects/Projects";
 function showMenu() {
     let header = document.querySelector("header");
     let burgerMenu = document.querySelector(".burger");
@@ -43,7 +44,7 @@ function Router() {
                             <li><NavLink to="/">Home</NavLink></li>
                             <li><NavLink to="/about" element={<AboutPage/>}>About</NavLink></li>
                             <li><NavLink to="/services">Services</NavLink></li>
-                            <li><NavLink to="/project">Project</NavLink></li>
+                            <li><NavLink to="/projects">Projects</NavLink></li>
                             <li><NavLink to="/blog">Blog</NavLink></li>
                             <li><NavLink to="/contact">Contact</NavLink></li>
                         </ul>
@@ -55,6 +56,7 @@ function Router() {
                     <Route exact path="/" element={<HomePage />}/>
                     <Route path="about" element={<AboutPage/>}/>
                     <Route path="services" element={<Services/>}/>
+                    <Route path="projects" element={<ProjectsPage/>}/>
                     <Route path="*" element={<NotFound/>}/>
                 </Routes>
             </>

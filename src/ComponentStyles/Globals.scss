@@ -25,7 +25,7 @@ a div svg { transform: translate(5px, 3px); }
       section.news .card { .card-bg { p { background-color: #292F36 !important; } } svg { circle { fill: #4D5053; } path { fill: none; } } &:nth-child(2) { background-color: #4D5053 !important; svg circle { fill: #555; } } }
       section.join { .container { background-color: #1F2022 !important; } svg path { fill: none;}}
       section.about-clients { background-color: darken($color: #F4F0EC, $amount: 25%); .cards .card .card-body { background-color: #1F2022; } }
-      section.about-hero .text, section.services-hero .text { background-color: #1F2022; }
+      section.about-hero .text, section.services-hero .text, section.projects-hero .text { background-color: #1F2022; }
       section.about-words .container { border-color: darken($color: #F4F0EC, $amount: 25%); }
       footer {a.logo svg path { fill: #CDA274 !important; } svg rect, svg path { fill: #fff !important; } }
     }
@@ -554,7 +554,7 @@ section {
 }
 // About Page
 section {
-    &.about-hero, &.services-hero {
+    &.about-hero, &.services-hero, &.projects-hero {
         margin: 0;
         background: fixed url("../pages/About/img/about-hero.png") no-repeat center center / cover;
         width: 100%;
@@ -827,6 +827,10 @@ section {
                 }
             }
         }
+    }
+    &.projects-hero { 
+        background-image: url("../pages/Projects/projects-hero.png");
+        .text { padding-inline: 120px; }
     }
 }
 
