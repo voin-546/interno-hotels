@@ -18,11 +18,15 @@ const Container = (props) => {
 function HomePage() {
     return (
         <>
-        <>
             <Helmet>
+                <meta property="og:site_name" content="Interno"/>
+                <meta property="og:title" content="Let Your Home Be Unique"/>
+                <meta property="og:description" content="There are many variations of the passages of lorem Ipsum fromavailable, variations of the passages."/>
+                <meta property="og:image" content="https://interno-uz.netlify.app/images/background.png"/>
+                <meta property="og:image:width" content="500"/>
+                <meta property="og:image:height" content="300"/>
                 <title>Interno</title>
             </Helmet>
-        </>
             <section className="hero">
                 <Container>
                     <div className="text">

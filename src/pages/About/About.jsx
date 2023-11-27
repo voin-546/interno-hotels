@@ -14,6 +14,10 @@ const AboutPage = () => {
     <>
       <>
         <Helmet>
+          <meta property="og:site_name" content="About Interno"/>
+          <meta property="og:title" content="About Us"/>
+          <meta property="og:description" content="This is information about Interno."/>
+          <meta property="og:image" content="https://interno-hotels.vercel.app/static/media/about-hero.10abbf3d34b9410f2f5a.png"/>
           <title>About Interno</title>
         </Helmet>
       </>
