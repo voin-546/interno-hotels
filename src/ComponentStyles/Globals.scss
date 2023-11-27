@@ -30,6 +30,7 @@ a div svg { transform: translate(5px, 3px); }
       footer {a.logo svg path { fill: #CDA274 !important; } svg rect, svg path { fill: #fff !important; } }
     }
 }
+body { overflow-x: hidden; }
 .error {
     display: flex;
     justify-content: space-between;
@@ -42,6 +43,7 @@ a div svg { transform: translate(5px, 3px); }
     img { height: 100vh; @media (max-width: 1030px) { width: min(100%, 570px); height: auto; } }
     .text {
         width: min(100%, 570px);
+        @media (max-width: 1030px) { padding-top: 110px; } 
         h1 {
             color: #CDA274;
             font: 400 165px/125% "DM Serif Display";

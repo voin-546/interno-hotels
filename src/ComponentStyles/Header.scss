@@ -35,9 +35,11 @@ header {
     }
     &.show {
         height: 220px;
+        @media (min-width: 901px) { height: 80px; }
         nav {
             height: 140px;
             overflow: auto;
+            @media (min-width: 901px) { height: 80px; display: flex; align-items: center; }
         }
     }
     .container {
@@ -115,9 +117,8 @@ header {
                 --scale-bar: 0;
                 --rotate-bar-one: 45deg;
                 --rotate-bar-three: -45deg;
-    
                 .line:nth-child(1) {
-                    transition: top 200ms, transform 200ms 100ms
+                    transition: top 200ms, transform 200ms 100ms;
                 }
     
                 .line:nth-child(3) {
