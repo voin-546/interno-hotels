@@ -832,5 +832,43 @@ section {
         background-image: url("../pages/Projects/projects-hero.png");
         .text { padding-inline: 120px; }
     }
+    &.projects-cards {
+        .container { @media (max-width: 1100px) { padding-inline: 20px; } }
+        .container ul {
+            column-count: 2;
+            column-width: 518px;
+            column-gap: 30px;
+            width: 100%;
+            li { width: min(100%, 518px); @media (max-width: 1096px) { margin: auto; } }
+            @media (max-width: 1100px) { column-gap: 20px; }
+        }
+        img { width: 100%; }
+        .card-body {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-block: 30px;
+            h3 {
+                color: var(--primary-dark);
+                font: 400 25px/125% "DM Serif Display";
+                letter-spacing: .5px;
+            }
+            p {
+                color: var(--secondary-dark);
+                font: 400 22px/150% "Jost";
+                letter-spacing: .22px;
+            }
+            .icon {
+                width: 40px;
+                aspect-ratio: 1;
+                background-color: #F4F0EC;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                svg { margin: 0; }
+            }
+        }
+    }
 }
 
