@@ -12,6 +12,7 @@ import "../../ComponentStyles/Header.scss";
 import "../../ComponentStyles/Footer.scss"
 import { Helmet } from "react-helmet";
 import Footer from "../../Components/Footer";
+import Letter from "../../Components/Letter";
 const Container = (props) => {
     return (<div className="container">{props.children}</div>)
 }
@@ -27,6 +28,7 @@ function HomePage() {
                 <meta property="og:image:height" content="300"/>
                 <title>Interno</title>
             </Helmet>
+            <Letter/>
             <section className="hero">
                 <Container>
                     <div className="text">

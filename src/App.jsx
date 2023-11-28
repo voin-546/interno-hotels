@@ -8,6 +8,8 @@ import "aos/dist/aos.css";
 import NotFound from "./pages/404/NotFound";
 import Services from "./pages/Services/Services";
 import ProjectsPage from "./pages/Projects/Projects";
+import BlogPage from "./pages/Blog/Blog";
+import ContactPage from "./pages/Contact/Contact";
 function showMenu() {
     let header = document.querySelector("header");
     let burgerMenu = document.querySelector(".burger");
@@ -24,13 +26,11 @@ function Router() {
         <>
             <header>
                 <div className="container">
-                    <NavLink to="/">
-                        <a href="#!" className="logo">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
-                                <path d="M0 34.0003H13.4588V24.499C13.4588 22.4853 15.0898 20.8543 17.1035 20.8543C19.1172 20.8543 20.7482 22.4853 20.7482 24.499V34.0003H33.9975V0C15.2211 0 0 15.2211 0 34.0003Z" fill="#CDA274" />
-                            </svg>
-                            <span>Interno</span>
-                        </a>
+                    <NavLink to="/" className="logo">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
+                            <path d="M0 34.0003H13.4588V24.499C13.4588 22.4853 15.0898 20.8543 17.1035 20.8543C19.1172 20.8543 20.7482 22.4853 20.7482 24.499V34.0003H33.9975V0C15.2211 0 0 15.2211 0 34.0003Z" fill="#CDA274" />
+                        </svg>
+                        <span>Interno</span>
                     </NavLink>
                     <div className="burger-menu">
                         <div className="burger" onClick={showMenu}>
@@ -42,7 +42,7 @@ function Router() {
                     <nav>
                         <ul>
                             <li><NavLink to="/">Home</NavLink></li>
-                            <li><NavLink to="/about" element={<AboutPage/>}>About</NavLink></li>
+                            <li><NavLink to="/about" element={<AboutPage />}>About</NavLink></li>
                             <li><NavLink to="/services">Services</NavLink></li>
                             <li><NavLink to="/projects">Projects</NavLink></li>
                             <li><NavLink to="/blog">Blog</NavLink></li>
@@ -53,11 +53,13 @@ function Router() {
             </header>
             <>
                 <Routes>
-                    <Route exact path="/" element={<HomePage />}/>
-                    <Route path="about" element={<AboutPage/>}/>
-                    <Route path="services" element={<Services/>}/>
-                    <Route path="projects" element={<ProjectsPage/>}/>
-                    <Route path="*" element={<NotFound/>}/>
+                    <Route exact path="/" element={<HomePage />} />
+                    <Route path="about" element={<AboutPage />} />
+                    <Route path="services" element={<Services />} />
+                    <Route path="projects" element={<ProjectsPage />} />
+                    <Route path="blog" element={<BlogPage/>}/>
+                    <Route path="contact" element={<ContactPage/>}/>
+                    <Route path="*" element={<NotFound />} />
                 </Routes>
             </>
         </>

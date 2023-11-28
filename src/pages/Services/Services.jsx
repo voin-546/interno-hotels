@@ -5,6 +5,7 @@ import WorkImage2 from "./work/work 2.png";
 import WorkImage3 from "./work/work 3.png";
 import WorkImage4 from "./work/work 4.png";
 import Footer from "../../Components/Footer";
+import Letter from "../../Components/Letter";
 const Container = (props) => {
     return (<div className="container">{props.children}</div>)
 }
@@ -18,6 +19,7 @@ const Services = () => {
             <meta property="og:image" content="https://interno-hotels.vercel.app/static/media/hero-image.bc5ff1f1e5b46bd2a6ab.png"/>
                 <title>Interno Services</title>
             </Helmet>
+            <Letter/>
             <section className="services-hero">
                 <div className="text">
                     <h1 data-aos="fade-up">Services</h1>

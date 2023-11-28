@@ -9,6 +9,7 @@ import Client2 from "./img/clients/client 2.png";
 import Client3 from "./img/clients/client 3.png";
 import Client4 from "./img/clients/client 4.png";
 import Footer from "../../Components/Footer";
+import Letter from "../../Components/Letter";
 const AboutPage = () => {
   return (
     <>
@@ -20,6 +21,7 @@ const AboutPage = () => {
           <meta property="og:image" content="https://interno-hotels.vercel.app/static/media/about-hero.10abbf3d34b9410f2f5a.png"/>
           <title>About Interno</title>
         </Helmet>
+        <Letter/>
       </>
       <>
         <section className="about-hero">
