@@ -9,10 +9,6 @@
     scroll-behavior: smooth;
 }
 a div svg { transform: translate(5px, 3px); }
-:root {
-    --primary-dark: #292F36;
-    --secondary-dark: #4D5053;
-}
 @mixin form {
     form {
         width: min(100%, 796px);
@@ -71,23 +67,6 @@ a div svg { transform: translate(5px, 3px); }
                 svg { transform: translate(5px, 3px); }
             }
         }
-    }
-}
-@media (prefers-color-scheme: dark) {
-    :root { --primary-dark: #fff; --secondary-dark: #c0c3c5;}
-    body {
-      background-color: #292F36;
-      header { background-color: #292F36 !important; nav { background-color: #292F36; } .logo { svg path { fill: #CDA274; } } }  
-      section.clients, section.number { background-color: #CDA274; .card { background-color: #292F36 !important; } }
-      section.brands a { svg path { fill: #fff;} &:nth-child(2) svg path:nth-child(1) { fill: #292F36 !important;} &:nth-child(3) { svg path:nth-child(1) { fill: #4D5053 !important;} } }
-      section.projects { svg { circle { fill: #4D5053; } path { fill: none; } } }
-      section.number {h1 { color: #292F36 !important; } p { color: #555 !important; } }
-      section.news .card { .card-bg { p { background-color: #292F36 !important; } } svg { circle { fill: #4D5053; } path { fill: none; } } &:nth-child(2) { background-color: #4D5053 !important; svg circle { fill: #555; } } }
-      section.join { .container { background-color: #1F2022 !important; } svg path { fill: none;}}
-      section.about-clients { background-color: darken($color: #F4F0EC, $amount: 25%); .cards .card .card-body { background-color: #1F2022; } }
-      section.about-hero .text, section.services-hero .text, section.projects-hero .text, section.blog-hero .text, section.contact-hero .text { background-color: #1F2022; }
-      section.about-words .container { border-color: darken($color: #F4F0EC, $amount: 25%); }
-      footer {a.logo svg path { fill: #CDA274 !important; } svg rect, svg path { fill: #fff !important; } }
     }
 }
 body { overflow-x: hidden; }
@@ -635,7 +614,7 @@ section {
 }
 // About Page
 section {
-    &.about-hero, &.services-hero, &.projects-hero, &.blog-hero, &.contact-hero {
+    &.about-hero, &.services-hero, &.projects-hero, &.blog-hero, &.contact-hero, &.faq-hero {
         margin: 0;
         background: fixed url("../pages/About/img/about-hero.png") no-repeat center center / cover;
         width: 100%;
@@ -854,7 +833,7 @@ section {
     }
     &.projects-hero { 
         background-image: url("../pages/Projects/projects-hero.png");
-        .text { padding-inline: 120px; @media (max-width: 1050px) { padding-inline: 70px; } @media (max-width: 415px) { padding-inline: 30px; }}
+        .text { padding-inline: 100px; @media (max-width: 1050px) { padding-inline: 70px; } @media (max-width: 415px) { padding-inline: 30px; }}
     }
     &.projects-cards {
         .container { @media (max-width: 1100px) { padding-inline: 20px; } }
@@ -997,6 +976,103 @@ section {
                 button { @media (max-width: 855px) { width: min(100%, 211px); margin: auto; } }
             }
         }
+    }
+    &.faqs {
+        $bg: #fff;
+        $text: #7288a2;
+        $gray: #4d5974;
+        $lightgray: #e5e5e5;
+        $blue: #03b5d2;
+        .accordion {
+            .accordion-item {
+              border-bottom: 1px solid var(--primary-dark);
+              button[aria-expanded='true'] {
+                border-bottom: 1px solid $blue;
+              }
+            }
+            button {
+              position: relative;
+              display: block;
+              text-align: start;
+              width: 100%;
+              padding-block: 1em;
+              font-size: 1.15rem;
+              font-weight: 400;
+              border: none;
+              background: none;
+              outline: none;
+              &:hover, &:focus {
+                cursor: pointer;
+                color: $blue;
+                &::after {
+                  cursor: pointer;
+                  color: $blue;
+                  border: 1px solid $blue;
+                }
+              }
+              .accordion-title {
+                color: var(--primary-dark);
+                font: 400 25px/150% "DM Serif Display";
+                letter-spacing: .25px;
+              }
+              .icon {
+                display: inline-block;
+                position: absolute;
+                top: 18px;
+                right: 0;
+                width: 22px;
+                height: 22px;
+                border: 1px solid;
+                border-radius: 22px;
+                &::before {
+                  display: block;
+                  position: absolute;
+                  content: '';
+                  top: 9px;
+                  left: 5px;
+                  width: 10px;
+                  height: 2px;
+                  background: currentColor;
+                }
+                &::after {
+                  display: block;
+                  position: absolute;
+                  content: '';
+                  top: 5px;
+                  left: 9px;
+                  width: 2px;
+                  height: 10px;
+                  background: currentColor;
+                }
+              }
+            }
+            button[aria-expanded='true'] {
+              color: $blue;
+              .icon {
+                &::after {
+                  width: 0;
+                }
+              }
+              + .accordion-content {
+                opacity: 1;
+                max-height: 9em;
+                transition: all 200ms linear;
+                will-change: opacity, max-height;
+              }
+            }
+            .accordion-content {
+              opacity: 0;
+              max-height: 0;
+              overflow: hidden;
+              transition: opacity 200ms linear, max-height 200ms linear;
+              will-change: opacity, max-height;
+              p {
+                font-size: 1rem;
+                font-weight: 300;
+                margin: 2em 0;
+              }
+            }
+          }
     }
 }
 

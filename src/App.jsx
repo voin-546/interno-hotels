@@ -2,6 +2,7 @@ import { Routes, Route, NavLink } from "react-router-dom";
 import AboutPage from "./pages/About/About";
 import HomePage from "./pages/Home/Home";
 import "./ComponentStyles/Header.scss";
+import "./ComponentStyles/Dark-Theme.scss"
 import { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
@@ -10,6 +11,8 @@ import Services from "./pages/Services/Services";
 import ProjectsPage from "./pages/Projects/Projects";
 import BlogPage from "./pages/Blog/Blog";
 import ContactPage from "./pages/Contact/Contact";
+import Letter from "./Components/Letter";
+import FAQPage from "./pages/Faq/Faqs";
 function showMenu() {
     let header = document.querySelector("header");
     let burgerMenu = document.querySelector(".burger");
@@ -24,6 +27,7 @@ function Router() {
     })
     return (
         <>
+        <Letter></Letter>
             <header>
                 <div className="container">
                     <NavLink to="/" className="logo">
@@ -41,24 +45,25 @@ function Router() {
                     </div>
                     <nav>
                         <ul>
-                            <li><NavLink to="/">Home</NavLink></li>
                             <li><NavLink to="/about" element={<AboutPage />}>About</NavLink></li>
                             <li><NavLink to="/services">Services</NavLink></li>
                             <li><NavLink to="/projects">Projects</NavLink></li>
                             <li><NavLink to="/blog">Blog</NavLink></li>
                             <li><NavLink to="/contact">Contact</NavLink></li>
+                            <li><NavLink to="/faqs">FAQs</NavLink></li>
                         </ul>
                     </nav>
                 </div>
             </header>
             <>
                 <Routes>
-                    <Route exact path="/" element={<HomePage />} />
+                    <Route path="/" element={<HomePage/>}/>
                     <Route path="about" element={<AboutPage />} />
                     <Route path="services" element={<Services />} />
                     <Route path="projects" element={<ProjectsPage />} />
                     <Route path="blog" element={<BlogPage/>}/>
                     <Route path="contact" element={<ContactPage/>}/>
+                    <Route path="faqs" element={<FAQPage/>}/>
                     <Route path="*" element={<NotFound />} />
                 </Routes>
             </>

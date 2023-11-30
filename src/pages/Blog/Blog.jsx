@@ -2,7 +2,6 @@ import React from "react"
 import { Helmet } from "react-helmet";
 import BlogPostImage from "./blog-post.png";
 import Footer from "../../Components/Footer";
-import Letter from "../../Components/Letter";
 const BlogPage = () => {
     return (
         <>
@@ -12,7 +11,6 @@ const BlogPage = () => {
                 <meta property="og:description" content="Low Cost Latest Invented Interior Designing Ideas"/>
                 <title>Interno's Blog</title>
             </Helmet>
-            <Letter/>
             <section className="blog-hero">
                 <div className="text">
                     <h1 data-aos="fade-up">Articles & News</h1>

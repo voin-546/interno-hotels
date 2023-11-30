@@ -7,7 +7,6 @@ import ProjectImage3 from "./projects/project 3.png";
 import ProjectImage4 from "./projects/project 4.png";
 import ProjectImage5 from "./projects/project 5.png";
 import ProjectImage6 from "./projects/project 6.png";
-import Letter from "../../Components/Letter";
 
 const ProjectsPage = () => {
   return (
@@ -18,7 +17,6 @@ const ProjectsPage = () => {
       <meta property="og:description" content="Here are our projects, which we have ended."/>
       <title>Interno's Projects</title>
     </Helmet>
-    <Letter/>
       <section className="projects-hero">
         <div className="text">
           <h1 data-aos="fade-up">Our Projects</h1>

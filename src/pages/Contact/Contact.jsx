@@ -2,7 +2,6 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import Map from "./map.png";
 import Footer from "../../Components/Footer"
-import Letter from "../../Components/Letter";
 const ContactPage = () => {
     return (
         <>
@@ -12,7 +11,6 @@ const ContactPage = () => {
                 <meta property="og:description" content="We love meeting new people and helping them."/>
                 <title>Contact Interno</title>
             </Helmet>
-            <Letter/>
             <section className="contact-hero">
                 <div className="text">
                     <h1 data-aos="fade-up">Contact Us</h1>
