@@ -1,10 +1,25 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Helmet } from "react-helmet";
 import Image1 from "./image 1.png";
 import Image2 from "./image 2.png";
-import Scripts from "./script"; 
 function FAQPage() {
-    <script src={Scripts}></script>
+    useEffect(() => {
+        const items = document.querySelectorAll(".accordion button");
+        let i;
+        function toggleAccordion() {
+          const itemToggle = this.getAttribute('aria-expanded');
+          
+          for (i = 0; i < items.length; i++) {
+            items[i].setAttribute('aria-expanded', 'false');
+          }
+          
+          if (itemToggle === 'false') {
+            this.setAttribute('aria-expanded', 'true');
+          }
+        }
+        
+        items.forEach(item => item.addEventListener('click', toggleAccordion));
+    })
     return (
         <>
             <Helmet>
@@ -22,7 +37,6 @@ function FAQPage() {
                 </div>
                 <div className="container">
                     <div className="text">
-                        <h2>Frequently Asked Questions</h2>
                         <div className="accordion">
                             <div className="accordion-item">
                                 <button id="accordion-button-1" aria-expanded="false"><span className="accordion-title">What is the Hipcouch Interior Design Service?</span>
@@ -69,8 +83,8 @@ function FAQPage() {
                                 </div>
                             </div>
                         </div>
-                        <img src={Image1} alt="Living Room" />
                     </div>
+                    <img src={Image1} alt="Living Room" />
                 </div>
             </section>
         </>

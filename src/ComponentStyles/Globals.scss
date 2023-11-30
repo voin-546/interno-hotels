@@ -875,6 +875,7 @@ section {
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
+            img { width: min(100%, 570px); }
             h1 {
                 color: var(--primary-dark);
                 font: 400 50px "DM Serif Display";
@@ -983,24 +984,41 @@ section {
         $gray: #4d5974;
         $lightgray: #e5e5e5;
         $blue: #03b5d2;
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-block: 50px 150px;
+            @media (max-width: 1130px) { padding-inline: 30px; justify-content: center; gap: 40px; }
+        }
+        .text {
+            width: min(100%, 565px);
+        }
+        img { width: min(100%, 500px); }
         .accordion {
+            margin-top: 36px;
+            width: 100%;
             .accordion-item {
               border-bottom: 1px solid var(--primary-dark);
+              margin-top: 20px;
               button[aria-expanded='true'] {
-                border-bottom: 1px solid $blue;
+                border-bottom: 1.5px solid #CDA274;
+                .icon svg { transform: rotate(90deg); }
               }
             }
             button {
-              position: relative;
-              display: block;
               text-align: start;
               width: 100%;
               padding-block: 1em;
               font-size: 1.15rem;
               font-weight: 400;
               border: none;
-              background: none;
+              background: transparent;
               outline: none;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
               &:hover, &:focus {
                 cursor: pointer;
                 color: $blue;
@@ -1017,33 +1035,8 @@ section {
               }
               .icon {
                 display: inline-block;
-                position: absolute;
-                top: 18px;
-                right: 0;
-                width: 22px;
-                height: 22px;
-                border: 1px solid;
-                border-radius: 22px;
-                &::before {
-                  display: block;
-                  position: absolute;
-                  content: '';
-                  top: 9px;
-                  left: 5px;
-                  width: 10px;
-                  height: 2px;
-                  background: currentColor;
-                }
-                &::after {
-                  display: block;
-                  position: absolute;
-                  content: '';
-                  top: 5px;
-                  left: 9px;
-                  width: 2px;
-                  height: 10px;
-                  background: currentColor;
-                }
+                svg path { stroke: var(--primary-dark); }
+                svg { transition: transform .3s; }
               }
             }
             button[aria-expanded='true'] {
@@ -1055,7 +1048,7 @@ section {
               }
               + .accordion-content {
                 opacity: 1;
-                max-height: 9em;
+                max-height: 150px;
                 transition: all 200ms linear;
                 will-change: opacity, max-height;
               }
@@ -1067,9 +1060,10 @@ section {
               transition: opacity 200ms linear, max-height 200ms linear;
               will-change: opacity, max-height;
               p {
-                font-size: 1rem;
-                font-weight: 300;
-                margin: 2em 0;
+                color: var(--secondary-dark);
+                font: 400 22px/150% "Jost";
+                letter-spacing: .22px;
+                margin-block: 10px;
               }
             }
           }
