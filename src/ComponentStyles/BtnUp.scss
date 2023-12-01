@@ -1,0 +1,18 @@
+.BtnUp {
+    width: 50px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background-color: #cda274;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    svg path { fill: #fff; }
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .3s, visibility .3s;
+    border: none;
+    cursor: pointer;
+    &.scrolled { visibility: visible; opacity: 1; }
+}

@@ -17,5 +17,6 @@
       section.about-hero .text, section.services-hero .text, section.projects-hero .text, section.blog-hero .text, section.contact-hero .text, section.faq-hero .text { background-color: #1F2022; }
       section.about-words .container { border-color: darken($color: #F4F0EC, $amount: 25%); }
       footer {a.logo svg path { fill: #CDA274 !important; } svg rect, svg path { fill: #fff !important; } }
+      .footer-col ul li a { transition: color .5s; &:hover { color: #fff; } }
     }
 }

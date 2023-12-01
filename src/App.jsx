@@ -13,6 +13,7 @@ import BlogPage from "./pages/Blog/Blog";
 import ContactPage from "./pages/Contact/Contact";
 import Letter from "./Components/Letter";
 import FAQPage from "./pages/Faq/Faqs";
+import BtnUp from "./Components/BtnUp";
 function showMenu() {
     let header = document.querySelector("header");
     let burgerMenu = document.querySelector(".burger");
@@ -27,8 +28,9 @@ function Router() {
     })
     return (
         <>
+        <BtnUp></BtnUp>
         <Letter></Letter>
-            <header>
+            <header id="top">
                 <div className="container">
                     <NavLink to="/" className="logo">
                         <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">

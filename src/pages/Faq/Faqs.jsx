@@ -2,22 +2,23 @@ import React, { useEffect } from "react";
 import { Helmet } from "react-helmet";
 import Image1 from "./image 1.png";
 import Image2 from "./image 2.png";
+import Footer from "../../Components/Footer";
 function FAQPage() {
     useEffect(() => {
         const items = document.querySelectorAll(".accordion button");
         let i;
         function toggleAccordion() {
-          const itemToggle = this.getAttribute('aria-expanded');
-          
-          for (i = 0; i < items.length; i++) {
-            items[i].setAttribute('aria-expanded', 'false');
-          }
-          
-          if (itemToggle === 'false') {
-            this.setAttribute('aria-expanded', 'true');
-          }
+            const itemToggle = this.getAttribute('aria-expanded');
+
+            for (i = 0; i < items.length; i++) {
+                items[i].setAttribute('aria-expanded', 'false');
+            }
+
+            if (itemToggle === 'false') {
+                this.setAttribute('aria-expanded', 'true');
+            }
         }
-        
+
         items.forEach(item => item.addEventListener('click', toggleAccordion));
     })
     return (
@@ -27,8 +28,8 @@ function FAQPage() {
             </Helmet>
             <section className="faq-hero">
                 <div className="text">
-                    <h1>FAQs</h1>
-                    <p>Home / FAQs</p>
+                    <h1 data-aos="fade-up">FAQs</h1>
+                    <p data-aos="fade-up" data-aos-delay="300">Home / FAQs</p>
                 </div>
             </section>
             <section className="faqs">
@@ -84,13 +85,13 @@ function FAQPage() {
                             </div>
                         </div>
                     </div>
-                    <img src={Image1} alt="Living Room" />
+                    <img src={Image1} alt="Living Room" data-aos="fade-up"/>
                 </div>
             </section>
             <section className="faqs">
                 <div className="container">
-                <img src={Image2} alt="Living Room" />
-                <div className="text">
+                    <img src={Image2} alt="Living Room" data-aos="fade-down"/>
+                    <div className="text">
                         <div className="accordion">
                             <div className="accordion-item">
                                 <button id="accordion-button-1" aria-expanded="false"><span className="accordion-title">How long does it take?</span>
@@ -140,6 +141,7 @@ function FAQPage() {
                     </div>
                 </div>
             </section>
+            <Footer />
         </>
     )
 }
