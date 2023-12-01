@@ -984,6 +984,7 @@ section {
         $gray: #4d5974;
         $lightgray: #e5e5e5;
         $blue: #03b5d2;
+        --scale: 0;
         .container {
             display: flex;
             align-items: center;
@@ -1002,9 +1003,16 @@ section {
             .accordion-item {
               border-bottom: 1px solid var(--primary-dark);
               margin-top: 20px;
-              button[aria-expanded='true'] {
-                border-bottom: 1.5px solid #CDA274;
-                .icon svg { transform: rotate(90deg); }
+              button[aria-expanded="true"] {
+                &::after { --scale: 1; }
+                .icon svg { transform: rotate(90deg); path { stroke: #CDA274; } }
+                span.accordion-title { color: #CDA274; }
+                + .accordion-content {
+                    opacity: 1;
+                    max-height: 150px;
+                    transition: all 200ms linear;
+                    will-change: opacity, max-height;
+                  }
               }
             }
             button {
@@ -1019,38 +1027,29 @@ section {
               display: flex;
               justify-content: space-between;
               align-items: center;
-              &:hover, &:focus {
-                cursor: pointer;
-                color: $blue;
+              position: relative;
+              cursor: pointer;
                 &::after {
-                  cursor: pointer;
-                  color: $blue;
-                  border: 1px solid $blue;
+                    content: "";
+                    position: absolute;
+                    bottom: -1.5px;
+                    width: 100%;
+                    height: 1.5px;
+                    background-color: #CDA274;
+                    transition: transform .3s;
+                    transform: scaleX(var(--scale));
+                    transform-origin: left;
                 }
-              }
               .accordion-title {
                 color: var(--primary-dark);
                 font: 400 25px/150% "DM Serif Display";
                 letter-spacing: .25px;
+                transition: color .5s;
               }
               .icon {
                 display: inline-block;
-                svg path { stroke: var(--primary-dark); }
+                svg path { stroke: var(--primary-dark); transition: stroke .3s; }
                 svg { transition: transform .3s; }
-              }
-            }
-            button[aria-expanded='true'] {
-              color: $blue;
-              .icon {
-                &::after {
-                  width: 0;
-                }
-              }
-              + .accordion-content {
-                opacity: 1;
-                max-height: 150px;
-                transition: all 200ms linear;
-                will-change: opacity, max-height;
               }
             }
             .accordion-content {
@@ -1066,7 +1065,7 @@ section {
                 margin-block: 10px;
               }
             }
-          }
+        }
     }
 }
 

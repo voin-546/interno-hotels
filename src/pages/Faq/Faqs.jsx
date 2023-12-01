@@ -87,6 +87,59 @@ function FAQPage() {
                     <img src={Image1} alt="Living Room" />
                 </div>
             </section>
+            <section className="faqs">
+                <div className="container">
+                <img src={Image2} alt="Living Room" />
+                <div className="text">
+                        <div className="accordion">
+                            <div className="accordion-item">
+                                <button id="accordion-button-1" aria-expanded="false"><span className="accordion-title">How long does it take?</span>
+                                    <span className="icon" aria-hidden="true">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="8" height="17" viewBox="0 0 8 17" fill="none">
+                                            <path d="M0.999526 15.1855L6.94238 8.49983L0.999525 1.81412" stroke="#292F36" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                        </svg>
+                                    </span>
+                                </button>
+                                <div className="accordion-content">
+                                    <p>Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary popular belief. There are many variations of passages of Lorem Ipsum available, but the majority randomised.</p>
+                                </div>
+                            </div>
+                            <div className="accordion-item">
+                                <button id="accordion-button-2" aria-expanded="false"><span className="accordion-title">Can I use my existing furnishings?</span><span className="icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="8" height="17" viewBox="0 0 8 17" fill="none">
+                                    <path d="M0.999526 15.1855L6.94238 8.49983L0.999525 1.81412" stroke="#292F36" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                </svg></span></button>
+                                <div className="accordion-content">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
+                                </div>
+                            </div>
+                            <div className="accordion-item">
+                                <button id="accordion-button-4" aria-expanded="false"><span className="accordion-title">I put into redesigning my interior?</span><span className="icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="8" height="17" viewBox="0 0 8 17" fill="none">
+                                    <path d="M0.999526 15.1855L6.94238 8.49983L0.999525 1.81412" stroke="#292F36" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                </svg></span></button>
+                                <div className="accordion-content">
+                                    <p>Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary popular belief. There are many variations of passages of Lorem Ipsum available, but the majority randomised.</p>
+                                </div>
+                            </div>
+                            <div className="accordion-item">
+                                <button id="accordion-button-5" aria-expanded="false"><span className="accordion-title">What do your services cost?</span><span className="icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="8" height="17" viewBox="0 0 8 17" fill="none">
+                                    <path d="M0.999526 15.1855L6.94238 8.49983L0.999525 1.81412" stroke="#292F36" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                </svg></span></button>
+                                <div className="accordion-content">
+                                    <p>Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary popular belief. There are many variations of passages of Lorem Ipsum available, but the majority randomised.</p>
+                                </div>
+                            </div>
+                            <div className="accordion-item">
+                                <button id="accordion-button-3" aria-expanded="false"><span className="accordion-title">Do you offer free consultations?</span><span className="icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="8" height="17" viewBox="0 0 8 17" fill="none">
+                                    <path d="M0.999526 15.1855L6.94238 8.49983L0.999525 1.81412" stroke="#292F36" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                </svg></span></button>
+                                <div className="accordion-content">
+                                    <p>Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary popular belief. There are many variations of passages of Lorem Ipsum available, but the majority randomised.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </>
     )
 }
