@@ -11,7 +11,6 @@ import Services from "./pages/Services/Services";
 import ProjectsPage from "./pages/Projects/Projects";
 import BlogPage from "./pages/Blog/Blog";
 import ContactPage from "./pages/Contact/Contact";
-import Letter from "./Components/Letter";
 import FAQPage from "./pages/Faq/Faqs";
 import BtnUp from "./Components/BtnUp";
 import Team from "./pages/Team/Team";
@@ -32,7 +31,6 @@ function Router() {
     return (
         <>
         <BtnUp></BtnUp>
-        <Letter></Letter>
             <header id="top">
                 <div className="container">
                     <NavLink to="/" className="logo">

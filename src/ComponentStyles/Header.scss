@@ -19,11 +19,10 @@ header {
         padding-inline: 10px;
     }
     &.show {
-        height: 220px;
+        height: 320px;
         @media (min-width: 901px) { height: 80px; }
         nav {
-            height: 140px;
-            overflow: auto;
+            height: 240px;
             @media (min-width: 901px) { height: 80px; display: flex; align-items: center; }
         }
     }

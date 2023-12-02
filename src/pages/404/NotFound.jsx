@@ -1,11 +1,9 @@
 import React from "react";
 import Image from "./image.png";
 import Footer from "../../Components/Footer";
-import Letter from "../../Components/Letter";
 const NotFound = () => {
     return (
         <>
-        <Letter/>
             <div className="error">
                 <div className="text">
                     <h1 data-aos="fade-up">404</h1>
