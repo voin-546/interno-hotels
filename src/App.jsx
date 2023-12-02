@@ -16,6 +16,7 @@ import FAQPage from "./pages/Faq/Faqs";
 import BtnUp from "./Components/BtnUp";
 import Team from "./pages/Team/Team";
 import ProjectDetails from "./pages/Projects/ProjectDetails/ProjectDetails";
+import Pricing from "./pages/Pricing/Pricing";
 function showMenu() {
     let header = document.querySelector("header");
     let burgerMenu = document.querySelector(".burger");
@@ -70,6 +71,7 @@ function Router() {
                     <Route path="faqs" element={<FAQPage/>}/>
                     <Route path="team" element={<Team/>}/>
                     <Route path="projects/details" element={<ProjectDetails/>}/>
+                    <Route path="pricing" element={<Pricing/>}/>
                     <Route path="*" element={<NotFound />} />
                 </Routes>
             </>

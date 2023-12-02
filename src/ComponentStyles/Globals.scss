@@ -614,7 +614,7 @@ section {
 }
 // About Page
 section {
-    &.about-hero, &.services-hero, &.projects-hero, &.blog-hero, &.contact-hero, &.faq-hero, &.team-hero, &.project-details-hero {
+    &.about-hero, &.services-hero, &.projects-hero, &.blog-hero, &.contact-hero, &.faq-hero, &.team-hero, &.project-details-hero, &.pricing-hero {
         margin: 0;
         background: fixed url("../pages/About/img/about-hero.png") no-repeat center center / cover;
         width: 100%;
@@ -1161,6 +1161,86 @@ section {
                     letter-spacing: .22px;
                     &:nth-of-type(1) {
                         margin-bottom: 30px;
+                    }
+                }
+            }
+        }
+    }
+    &.pricing-hero {
+        background-image: url("../pages/Pricing/pricing-hero.png");
+        .text {
+            padding-inline: 95px;
+        }
+    }
+    &.pricing {
+        .container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            @media (max-width: 1100px) { justify-content: center; gap: 30px;}
+            .card {
+                width: min(100%, 358px);
+                border-radius: 33px;
+                background: #F4F0EC;
+                padding-block: 64px;
+                text-align: center;
+                @media (prefers-color-scheme: dark) {
+                    background-color: darken($color: #F4F0EC, $amount: 45%);
+                }
+                h3 {
+                    color: var(--primary-dark);
+                    font: 400 25px/150% "DM Serif Display";
+                    letter-spacing: .25px;
+                }
+                span {
+                    color: var(--primary-dark);
+                    font: 400 25px "DM Serif Display";
+                    letter-spacing: .25px;
+                    span {
+                        font-size: 85px;
+                    }
+                }
+                div { 
+                    padding: 33px 44px 0; 
+                    border-top: 1px solid #CDA274;
+                    margin-top: 33px;
+                    ul li { margin-bottom: 25px; }
+                }
+                p {
+                    color: var(--secondary-dark);
+                    font: 400 20px "Jost";
+                    letter-spacing: .2px;
+                    margin-block: -10px 20px;
+                }
+                a {
+                    background-color: #CDA274;
+                    padding: 26px 48px;
+                    border-radius: 18px;
+                    box-shadow: 0px 10px 20px 0px rgba(192, 192, 192, .35);
+                    display: inline-block;
+                    margin-top: 28px;
+                    span {
+                        color: #fff;
+                        font: 600 18px/125% "Jost";
+                        letter-spacing: .36px;
+                        svg {
+                            transform: translate(5px, 3px);
+                        }
+                    }
+                    div { display: inline; }
+                }
+                &.active {
+                    a {
+                        background-color: #1F2022;
+                    }
+                    div { border-color: #1F2022; padding-top: 28px; }
+                    p.active {
+                        margin-top: -50px;
+                        padding: 5px 38px;
+                        background-color: #1F2022;
+                        color: #fff;
+                        font-weight: 600;
+                        border-radius: 18px;
                     }
                 }
             }
