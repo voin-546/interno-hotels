@@ -7,21 +7,7 @@
     box-sizing: border-box;
     -webkit-tap-highlight-color: transparent;
 }
-.fade-enter {
-    opacity: 0;
-    &-active { 
-        opacity: 1;
-        transition: opacity .3s ease-in;
-    }
-  }
-  .fade-exit {
-    opacity: 1;
-    &-active {
-        opacity: 0;
-        transition: opacity .3s ease-out;
-    }
-  }
-  
+img { font: 400 20px/150% "Jost";  color: var(--primary-dark);}
 a div svg { transform: translate(5px, 3px); }
 @mixin form {
     form {
@@ -628,7 +614,7 @@ section {
 }
 // About Page
 section {
-    &.about-hero, &.services-hero, &.projects-hero, &.blog-hero, &.contact-hero, &.faq-hero {
+    &.about-hero, &.services-hero, &.projects-hero, &.blog-hero, &.contact-hero, &.faq-hero, &.team-hero, &.project-details-hero {
         margin: 0;
         background: fixed url("../pages/About/img/about-hero.png") no-repeat center center / cover;
         width: 100%;
@@ -1077,7 +1063,106 @@ section {
                 font: 400 22px/150% "Jost";
                 letter-spacing: .22px;
                 margin-block: 10px;
-              }
+                }
+            }
+        }
+    }
+    &.team-hero {
+        background-image: url("../pages/Team/team-hero.png");
+        .text { padding-inline: 100px; }
+    }
+    &.team {
+        .container { 
+            display: flex; 
+            justify-content: space-between; 
+            flex-wrap: wrap;
+            @media (max-width: 1100px) { justify-content: center; gap: 30px; }
+            .card { width: min(100%, 253px); margin-bottom: 50px; }
+            img { width: 100%; }
+            .card-body {
+                text-align: center;
+                padding: 17px;
+                h3 {
+                    color: var(--primary-dark);
+                    font: 400 25px/150% "DM Serif Display";
+                }
+                p {
+                    color: var(--secondary-dark);
+                    font: 400 18px/150% "Jost";
+                }
+                .social-links {
+                    display: flex;
+                    justify-content: center;
+                    svg { stroke: var(--primary-dark); }
+                    gap: 25px;
+                    flex-wrap: wrap;
+                    margin-top: 16px;
+                }
+            }
+        }
+    }
+    &.project-details-hero {
+        background-image: url("../pages/Projects/ProjectDetails/project-details-hero.png");
+    }
+    &.info {
+        .container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-items: center;
+            @media (max-width: 1100px) { justify-content: center; }
+            .info-text {
+                width: min(100%, 442px);
+                padding: 55px;
+                background-color: #F4F0EC;
+                border-radius: 70px;
+                display: flex;
+                gap: 20px;
+                flex-direction: column;
+                @media (prefers-color-scheme: dark) {
+                    background-color: darken($color: #f4f0EC, $amount: 40%);
+                }
+                @media (max-width: 450px) {
+                    padding-inline: 35px;
+                }
+                @media (max-width: 415px) {
+                    padding-inline: 15px;
+                }
+                div {
+                    display: flex;
+                    h3 {
+                        color: var(--primary-dark);
+                        font: 400 22px/150% "DM Serif Display";
+                        letter-spacing: .22px;
+                        width: min(100%, 98px);
+                    }
+                    span, a {
+                        color: var(--secondary-dark);
+                        font: 400 22px/150% "Jost";
+                        letter-spacing: .22px;
+                        display: inline-block;
+                        margin-left: 50px;
+                    }
+                }
+            }
+            .text {
+                width: min(100%, 628px);
+                @media (max-width: 1100px) { 
+                    text-align: center;
+                }
+                h1 {
+                    color: var(--primary-dark);
+                    font: 400 50px/125% "DM Serif Display";
+                    letter-spacing: 1px;
+                }
+                p {
+                    color: var(--secondary-dark);
+                    font: 400 22px/150% "Jost";
+                    letter-spacing: .22px;
+                    &:nth-of-type(1) {
+                        margin-bottom: 30px;
+                    }
+                }
             }
         }
     }

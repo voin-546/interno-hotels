@@ -46,7 +46,7 @@ const BlogPage = () => {
                         <div className="card-bg">
                             <p>Kitchan Design</p>
                         </div>
-                        <div className="card-body">
+                        <a href="/projects/project-details" className="card-body">
                             <h3>Let’s Get Solution For Building Construction Work</h3>
                             <div>
                                 <p>26 December, 2022 </p>
@@ -55,13 +55,13 @@ const BlogPage = () => {
                                     <path d="M23.771 32.9529L29.7139 26.2672L23.771 19.5815" stroke="#292F36" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                 </svg>
                             </div>
-                        </div>
+                        </a>
                     </div>
                     <div className="card" data-aos="fade-up" data-aos-delay="300">
                         <div className="card-bg">
                             <p>Living Design</p>
                         </div>
-                        <div className="card-body">
+                        <a href="/projects/project-details" className="card-body">
                             <h3>Low Cost Latest Invented Interior Designing<br /> Ideas.</h3>
                             <div>
                                 <p>22 December, 2022</p>
@@ -70,13 +70,13 @@ const BlogPage = () => {
                                     <path d="M23.771 32.9529L29.7139 26.2672L23.771 19.5815" stroke="#292F36" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                 </svg>
                             </div>
-                        </div>
+                        </a>
                     </div>
                     <div className="card" data-aos="fade-up" data-aos-delay="300">
                         <div className="card-bg">
                             <p>Interior Design</p>
                         </div>
-                        <div className="card-body">
+                        <a href="/projects/project-details" className="card-body">
                             <h3>Best For Any Office & Business Interior<br /> Solution</h3>
                             <div>
                                 <p>26 December,2022 </p>
@@ -85,13 +85,13 @@ const BlogPage = () => {
                                     <path d="M23.771 32.9529L29.7139 26.2672L23.771 19.5815" stroke="#292F36" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                 </svg>
                             </div>
-                        </div>
+                        </a>
                     </div>
                     <div className="card" data-aos="fade-up">
                         <div className="card-bg">
                             <p>Kitchan Design</p>
                         </div>
-                        <div className="card-body">
+                        <a href="/projects/project-details" className="card-body">
                             <h3>Let’s Get Solution For Building Construction Work</h3>
                             <div>
                                 <p>26 December, 2022 </p>
@@ -100,13 +100,13 @@ const BlogPage = () => {
                                     <path d="M23.771 32.9529L29.7139 26.2672L23.771 19.5815" stroke="#292F36" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                 </svg>
                             </div>
-                        </div>
+                        </a>
                     </div>
                     <div className="card" data-aos="fade-up" data-aos-delay="300">
                         <div className="card-bg">
                             <p>Living Design</p>
                         </div>
-                        <div className="card-body">
+                        <a href="/projects/project-details" className="card-body">
                             <h3>Low Cost Latest Invented Interior Designing<br /> Ideas.</h3>
                             <div>
                                 <p>22 December, 2022</p>
@@ -115,13 +115,13 @@ const BlogPage = () => {
                                     <path d="M23.771 32.9529L29.7139 26.2672L23.771 19.5815" stroke="#292F36" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                 </svg>
                             </div>
-                        </div>
+                        </a>
                     </div>
                     <div className="card" data-aos="fade-up" data-aos-delay="300">
                         <div className="card-bg">
                             <p>Interior Design</p>
                         </div>
-                        <div className="card-body">
+                        <a href="/projects/project-details" className="card-body">
                             <h3>Best For Any Office & Business Interior<br /> Solution</h3>
                             <div>
                                 <p>26 December,2022 </p>
@@ -130,7 +130,7 @@ const BlogPage = () => {
                                     <path d="M23.771 32.9529L29.7139 26.2672L23.771 19.5815" stroke="#292F36" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                 </svg>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
             </section>
