@@ -16,6 +16,7 @@ import BtnUp from "./Components/BtnUp";
 import Team from "./pages/Team/Team";
 import ProjectDetails from "./pages/Projects/ProjectDetails/ProjectDetails";
 import Pricing from "./pages/Pricing/Pricing";
+import ThemeSwitch from "./Components/ThemeSwitch";
 function showMenu() {
     let header = document.querySelector("header");
     let burgerMenu = document.querySelector(".burger");
@@ -55,6 +56,7 @@ function Router() {
                             <li><NavLink to="/contact">Contact</NavLink></li>
                             <li><NavLink to="/faqs">FAQs</NavLink></li>
                         </ul>
+                        <ThemeSwitch/>
                     </nav>
                 </div>
             </header>

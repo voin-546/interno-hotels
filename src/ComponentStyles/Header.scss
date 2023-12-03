@@ -113,21 +113,26 @@ header {
     
     }
     nav {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
         @media (max-width: 900px) {
             position: absolute;
             top: 80px;
             background-color: #fff;
-            width: 100%;
             transition: height .5s;
             height: 0;
             overflow: hidden;
+            display: block;
         }
         ul {
             display: flex;
             gap: 35px;
             align-items: center;
+            margin: auto;
             @media (max-width: 900px) {
                 display: block;
+                margin: 0;
             }
             li { &:nth-child(6) { @media (max-width: 900px) { margin-block-end: 10px; } } }
             li a {
