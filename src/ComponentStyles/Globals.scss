@@ -6,9 +6,11 @@
     list-style-type: none;
     box-sizing: border-box;
     -webkit-tap-highlight-color: transparent;
+    user-select: none;
 }
 img { font: 400 20px/150% "Jost";  color: var(--primary-dark);}
 a div svg { transform: translate(5px, 3px); }
+h1, h2, h3, h4, h5, p { cursor: text; }
 @mixin form {
     form {
         width: min(100%, 796px);
@@ -21,6 +23,7 @@ a div svg { transform: translate(5px, 3px); }
             color: var(--secondary-dark);
             font: 400 22px/150% "Jost";
             letter-spacing: .22px;
+            cursor: pointer;
         }
         .input-box {
             width: min(100%, 378px);
@@ -34,6 +37,7 @@ a div svg { transform: translate(5px, 3px); }
                 color: var(--primary-dark);
                 caret-color: var(--primary-dark);
                 background: transparent;
+                cursor: pointer;
             }
         }
         .textarea-box { 
@@ -50,6 +54,8 @@ a div svg { transform: translate(5px, 3px); }
                 font: 400 20px "Jost";
                 caret-color: var(--primary-dark);
                 background: transparent;
+                overflow-y: hidden;
+                cursor: pointer;
             }
         }
         button {
