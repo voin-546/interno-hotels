@@ -31,7 +31,7 @@ export default function Team() {
             <Helmet>
                 <title>Our Team</title>
             </Helmet>
-            <section className="team-hero">
+            <section className="team-hero" id="hero">
                 <div className="text">
                     <h1 data-aos="fade-up">Our Team</h1>
                     <p data-aos="fade-up" data-aos-delay="300">Home / Team</p>

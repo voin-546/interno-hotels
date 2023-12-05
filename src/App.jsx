@@ -27,12 +27,12 @@ function Router() {
     useEffect(() => {
         Aos.init({
             duration: 1200,
-        })
+        });       
     })
     return (
         <>
         <BtnUp></BtnUp>
-            <header id="top">
+            <header id="header">
                 <div className="container">
                     <NavLink to="/" className="logo">
                         <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">

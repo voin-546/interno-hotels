@@ -12,10 +12,10 @@ const Services = () => {
     return (
         <>
             <Helmet>
-            <meta property="og:site_name" content="Interno Services"/>
-            <meta property="og:title" content="Our Services"/>
-            <meta property="og:description" content="This is information about Interno services."/>
-            <meta property="og:image" content="https://interno-hotels.vercel.app/static/media/hero-image.bc5ff1f1e5b46bd2a6ab.png"/>
+                <meta property="og:site_name" content="Interno Services"/>
+                <meta property="og:title" content="Our Services"/>
+                <meta property="og:description" content="This is information about Interno services."/>
+                <meta property="og:image" content="https://interno-hotels.vercel.app/static/media/hero-image.bc5ff1f1e5b46bd2a6ab.png"/>
                 <title>Interno Services</title>
             </Helmet>
             <section className="services-hero">
