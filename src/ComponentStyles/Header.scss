@@ -47,6 +47,9 @@ header {
             color: var(--primary-dark);
             font: 400 40px/125% "DM Serif Display";
         }
+        @media (max-width: 900px) {
+            margin-top: -3px;
+        }
     }
     .burger-menu {
         display: none;
