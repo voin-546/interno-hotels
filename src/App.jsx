@@ -27,11 +27,20 @@ function Router() {
     useEffect(() => {
         Aos.init({
             duration: 1200,
-        });       
-    })
+        });
+        let header = document.querySelector("header"); 
+        let burger = document.querySelector(".burger");
+        document.addEventListener("click", (e) => { 
+            const click = e.composedPath().includes(header);
+            if (!click) { 
+                header.classList.remove("show"); 
+                burger.classList.remove("open");
+            };
+         });
+    });
     return (
         <>
-        <BtnUp></BtnUp>
+            <BtnUp></BtnUp>
             <header id="header">
                 <div className="container">
                     <NavLink to="/" className="logo">
@@ -56,22 +65,22 @@ function Router() {
                             <li><NavLink to="/contact">Contact</NavLink></li>
                             <li><NavLink to="/faqs">FAQs</NavLink></li>
                         </ul>
-                        <ThemeSwitch/>
+                        <ThemeSwitch />
                     </nav>
                 </div>
             </header>
             <>
                 <Routes>
-                    <Route path="/" element={<HomePage/>}/>
+                    <Route path="/" element={<HomePage />} />
                     <Route path="about" element={<AboutPage />} />
                     <Route path="services" element={<Services />} />
                     <Route path="projects" element={<ProjectsPage />} />
-                    <Route path="blog" element={<BlogPage/>}/>
-                    <Route path="contact" element={<ContactPage/>}/>
-                    <Route path="faqs" element={<FAQPage/>}/>
-                    <Route path="team" element={<Team/>}/>
-                    <Route path="projects/details" element={<ProjectDetails/>}/>
-                    <Route path="pricing" element={<Pricing/>}/>
+                    <Route path="blog" element={<BlogPage />} />
+                    <Route path="contact" element={<ContactPage />} />
+                    <Route path="faqs" element={<FAQPage />} />
+                    <Route path="team" element={<Team />} />
+                    <Route path="projects/details" element={<ProjectDetails />} />
+                    <Route path="pricing" element={<Pricing />} />
                     <Route path="*" element={<NotFound />} />
                 </Routes>
             </>
