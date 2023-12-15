@@ -19,6 +19,7 @@ body.dark {
   section.about-words .container { border-color: darken($color: #F4F0EC, $amount: 25%); }
   footer {a.logo svg path { fill: #CDA274 ; } svg rect, svg path { fill: #fff ; } }
   .footer-col ul li a { transition: color .5s; &:hover { color: #fff; } }
+  textarea { color: #fff; }
 }
 .ui-switch {
   --switch-bg: rgb(135, 150, 165);

@@ -46,7 +46,9 @@ h1, h2, h3, h4, h5, p { cursor: text; }
                 width: 100%;
                 max-width: 100%;
                 min-width: 100%;
-                height: 130px;
+                height: 170px;
+                min-height: 170px;
+                max-height: 170px;
                 border: none;
                 border-bottom: 1.5px solid var(--primary-dark);
                 outline: none;
@@ -934,6 +936,7 @@ section {
                 background-color: #F4F0EC;
                 border-radius: 50px;
                 padding: 76px 32px;
+                height: 450px;
                 @media (max-width: 876px) {
                     margin: auto;
                 }
