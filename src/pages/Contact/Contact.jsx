@@ -1,8 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import { Helmet } from "react-helmet";
 import Map from "./map.png";
 import Footer from "../../Components/Footer"
 const ContactPage = () => {
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [message, setMessage] = useState("");
+    const submitForm = (event) => {
+        event.preventDefault();
+        console.log("Форма отправлена");
+        console.log("Имя:", name);
+        console.log("Email:", email);
+        console.log("Сообщение:", message);
+      };
     return (
         <>
             <Helmet>
@@ -73,18 +83,18 @@ const ContactPage = () => {
                             </a>
                         </div>
                     </div>
-                    <form action="">
+                    <form onSubmit={submitForm}>
                         <div className="input-box">
                             <label htmlFor="username">Name</label>
-                            <input type="name" id="username" />
+                            <input type="name" id="username" value={name} onChange={(event) => setName(event.target.value)} required/>
                         </div>
                         <div className="input-box">
                             <label htmlFor="email">Email</label>
-                            <input type="email" id="email" />
+                            <input type="email" id="email" onChange={(event) => setEmail(event.target.value)} required/>
                         </div>
                         <div className="textarea-box">
-                            <label htmlFor="text">Hello, I'm interested in ...</label>
-                            <textarea id="text"></textarea>
+                            <label htmlFor="text">Hello, I"m interested in ...</label>
+                            <textarea id="text" value={message} onChange={(event) => setMessage(event.target.value)} required></textarea>
                         </div>
                         <button>
                             <span>Send Now</span>
