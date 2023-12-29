@@ -801,9 +801,6 @@ section {
             @media (min-width: 1320px) { padding-inline: 76px; }
             @media (max-width: 1140px) { padding-inline: 46px; }
             @media (max-width: 1050px) { padding-inline: 26px; }
-            @media (prefers-color-scheme: dark) {
-                background-color: darken($color: #F4F0EC, $amount: 45%);
-            }
             .text-center { margin-block-end: 30px; width: min(100%, 802px); }
             .work-item {
                 display: flex;

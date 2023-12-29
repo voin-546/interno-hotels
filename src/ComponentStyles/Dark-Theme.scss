@@ -17,6 +17,7 @@ body.dark {
   section.about-clients { background-color: darken($color: #F4F0EC, $amount: 45%); .cards .card .card-body { background-color: #1F2022; } }
   section.about-hero .text, section.services-hero .text, section.projects-hero .text, section.blog-hero .text, section.contact-hero .text, section.faq-hero .text, section.team-hero .text, section.pricing-hero .text { background-color: #1F2022; }
   section.about-words .container { border-color: darken($color: #F4F0EC, $amount: 25%); }
+  section.services-work { .container { background-color: darken($color: #F4F0EC, $amount: 45%); } }
   footer {a.logo svg path { fill: #CDA274 ; } svg rect, svg path { fill: #fff ; } }
   .footer-col ul li a { transition: color .5s; &:hover { color: #fff; } }
   textarea { color: #fff; }
